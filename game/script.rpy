@@ -181,7 +181,7 @@ label Juni_section:
     # 
 
     "As Ryan pumps his fist with an audible yes, I turn to Mr. Schumacher, who's been\
-    quielty smirking behind his desk, pretending to grade papers."
+    quietly smirking behind his desk, pretending to grade papers."
 
     # juni smile
 
