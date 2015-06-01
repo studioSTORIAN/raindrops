@@ -148,7 +148,7 @@ init -1 python hide:
 
     ## The file containing the default font.
 
-    style.default.font = "AndBasR.ttf"
+    style.default.font = "images/AndBasR.ttf"
 
     ## The default size of text.
 
