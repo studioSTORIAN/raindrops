@@ -5,8 +5,9 @@
 image black = "#000000"
 # image school = "school.png"
 # image st_john = "st_john.png"
-image north_isle = "images/high-school.jpg"
-image north_isle_classroom = "images/high-school.jpg"
+image st_john_north = "images/crossing.jpg"
+image north_isle_school = "images/high-school.jpg"
+image north_isle_classroom = "images/basketballcourt.png"
 image st_john_school = "images/school.png"
 # image academy_pacific = "academy_pacific.png"
 # image city = "city.png"
@@ -113,13 +114,13 @@ label Juni_section:
     # play sound "rain1.mp3" fadein
 
     "It's raining.{w} As usual."
-    "I lean back in my chair, put my arms up and stretch after another long day of classes."
+    "{cps=35}I lean back in my chair, put my arms up and stretch after another long day of classes.{/cps}"
 
     scene north_isle_classroom
     with dissolve
     # play sound "crowd.mp3" fadein # loop
 
-    "The chatter around me builds up and dies down as my classmates pack their things and head home.{w} \
+    "The chatter around me builds up and dies down as my classmates pack their things and head home.{w}\
     I won't be leaving nearly as soon."
     # scene notebook
     # with dissolve
@@ -220,11 +221,105 @@ label Juni_section:
     "The sounds of our ever-lively Quiz Bowl team drift out into the hallway as the rain\
     continues on without a care for my walk home."
 
-    scene black
-    with dissolve
+    # scene black
+    # with dissolve
     # stop sounds
 
+    scene st_john_north
+    with fade
+    # play sound rain 
+    # show jazz cheeky umbrella
+    z "Bye Juni! Careful around puddles!"
+    "I stick my tongue out at her, remembering the last time I came to school with my\
+    cardigan wet after tripping into a puddle."
+    # show Juni smile
+    u "See you tomorrow!"
+    "Jazz heads home with the usual amount of spring in her step."
+    
+    # novel mode
+    "By the time our first practice session was done, the sun was about a half hour away\
+    from setting - not that we could tell through all the rain."
+    "I look uphill at the long path between me and home. The view from my house is\
+    unmatched when clear, but that's a rare occasion between fall and spring.\
+    Perhaps I should ask my parents for a bike."
+    "I shake my head. How would I hold an umbrella while riding? Going any faster\
+    would mean riding into the rain, too."
+    "With a sigh, I start walking forward."
 
+    # scene tree-lined intersection
+    "The light dims as I feel the sun drop lower in the sky. I'm a little over halfway home."
+    "Not many students live this way, and those that do left school before I did. The\
+    sidewalk is quiet and only the rare car passes by to break up the monotony of the\
+    neverending rain."
+    "As I make my way forward, I begin to hear the splish-splash of someone running in the\
+    rain heading in my direction.{w} It must be him again."
+    "I try my best to look forward without looking at him directly. The road is straight for\
+    a good while here so I have no reason to feel odd about it, but I imagine it would still\
+    be a bit off-putting to be staring at him during his entire approach."
+
+    # dialogue mode
+    # show jase jog
+    # play sound wet jogging, faint
+    "As usual, he's wearing a light raincoat and yet his hood isn't up."
+    # show jase jog bigger
+    "His head and hair must be soaked."
+    # Jase gets closer
+    "I can't even begin to imagine living like he does."
+    "It's absolutely disgusting, and yet my curiosity gets the better of me."
+    "Just before he passes by, I dart my eyes to get a better look at him."
+    # even closer
+    "He appears to have the same idea."
+    "Our eyes meet for a brief, awkward moment."
+    
+    "I blink,{w} and he's gone." #insert blink animation here.
+    # novel mode 
+    "I arc my head back and sigh at my umbrella.{w} Why did I do that?"
+    "I pass by him about once a week."
+    "His face is familiar but I can’t seem to remember his name."
+    "These are tracks my mind has worn down for a while now, but going through it again ought\
+    to at least keep my mind off the rain long enough to get home."
+    "This jogger is on the other school’s Quiz Bowl team, but I don’t think I can say that\
+    we’ve ever met. I have seen him occasionally at regional tournaments, but we had never\
+    exchanged words before until this summer. Even then, I don’t think I was ever the one who was talking to him."
+
+    # flashback time!
+
+    # scene st_john_north bw
+    # with fade
+    scene black
+    with dissolve
+    "During the summer, we held a scrimmage with the Quiz Bowl team from the private\
+    Catholic high school in the city."
+    # play flashback music
+    "Our upperclassmen had been meaning to do this for years, but it was only when\
+    Jazz earned her officer position this year that she could finally push it through."
+    # scene talks
+    "She got in touch with her friend there - I think Audrey was the name.{w}"
+    "Even though she's a year younger than Jazz and I, she'd been named the president of\
+    their Quiz Bowl team, a fact I think Jazz was a bit envious of."
+    "From what she explained to me, Audrey herself seemed a bit insecure about it all.{w}\
+    Eager to prove herself, she and Jazz set up the scrimmage at our high school."
+
+    # new page
+
+    # scene north_isle_classroom bw
+    "Because it was summer, our upperclassmen had graduated and our team hadn't yet\
+    been able to recruit Ryan and Kevin, so it was only me, Jazz, and Savan."
+    "They were in a similar predicament, with only Audrey, him, and a third person on the team."
+    "I remember him being a bit hesitant to sit as a team member, making the excuse that\
+    he was only supposed to be the alternate. I found this odd because he was clearly the oldest\
+    student on their team."
+    "After I dug out the same buzzer we used during practice today, we took our seats.\
+    Savan had asked another friend to moderate, and so the game begun."
+
+    
+    "For the reaction-time buzzer-beater questions, we were about evenly matched,\
+    but not entirely because we were equally skilled."
+
+
+
+    scene black
+    with dissolve
 
 
 
