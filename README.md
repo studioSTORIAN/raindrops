@@ -10,11 +10,11 @@ Download their SDK to run.
 
 ### Usage
 
-#### If you don't use GitHub:
+##### If you don't use GitHub:
 
 You can download the current build of the game by downloading the ZIP file.
 
-#### If you do use GitHub:
+##### If you do use GitHub:
 
 You can clone the repository on your desktop using the button on the page if you have the desktop app. 
 The sync button should sync all changes pushed to the repository onto your local repository.
@@ -24,21 +24,21 @@ Alternatively, you can clone the repository through a git-enabled shell such as 
 
 ### Debugging Options
 
-#### Jumping instructions:
+##### Jumping instructions:
 Press "shift+O" to access the debug menu. From there, enter the command "jump" and a string representing the label you would like to jump to. Currently, we have three (3) scenes for Juni, including a scene 0 that acts as filler, and one (1) scene for Jase, which is filler. 
 
 For instance, if you wanted to jump to Juni's second scene, type in "jump juni2".
 
 ### Contributing
 
-#### StudioSTORIAN:
+##### StudioSTORIAN:
 
 If you're on StudioSTORIAN and want to directly push via the repository, give Carlin or Patrick your GitHub username, and we can add you to the contributors. If you have questions, ask Patrick or search for help on Google or GitHub's help pages.
 
-#### Others:
+##### Others:
 
 I don't know how GitHub works, as I've stated before. We're not expecting random strangers to see this.
 
-###
+---
 
 If you have any further questions, contact me via slack or email me at patrickgan2005@gmail.com.
