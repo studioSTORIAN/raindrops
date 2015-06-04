@@ -20,10 +20,6 @@ image juni smile = "images/barkley.png"
 # Declare characters used by this game.
 define e = Character('Eileen', color="#c8ffc8")
 define l = Character(_("TARS"), color="#ffcccc")
-define jase = Character('Jase', color="#0000ff")
-define juni = Character('Juni', color="#ff0000")
-define mark = Character('Mark', color="#8888ff")
-define jazz = Character('Jazz', color="#ff8888")
 
 define u = Character("Juni", color="#ff0000")
 define z = Character("Jazz", color="#ffcccc")
@@ -33,6 +29,13 @@ define s = Character("Savan")
 define r = Character("Ryan")
 define k = Character("Kevin")
 define a = Character("Audrey")
+
+define jase = e
+define juni = u
+define mark = c
+define jazz = z
+
+define n = Character(None, kind=nvl)
 
 define typo = Character("TYPO HERE?", color="#ff0000")
 
@@ -63,14 +66,14 @@ label start:
     $ jase_complete = False
     $ juni_complete = False
 
-    stop music fadeout 1.0
-    play music "sounds/darkcoffee.mp3"
-    scene black
+    # stop music fadeout 1.0
+    # play music "sounds/darkcoffee.mp3"
+    # scene black
 
     if start_character == "Jase":
-        jump Jase_section
+        jump jase1
     else:
-        jump Juni_section
+        jump juni1
 
 
 label Jase_start:
@@ -82,7 +85,11 @@ label Jase_start:
     jump start
  
 
-label Jase_section:
+label jase1:
+
+    stop music fadeout 1.0
+    play music "sounds/darkcoffee.mp3"
+    scene black
 
     # with dissolve
     scene st_john_school
@@ -107,11 +114,14 @@ label Juni_start:
     jump start
 
 
-label Juni_section:
+label juni1:
 
     # Begin Day 1 Juni
 
     # play sound "rain1.mp3" fadein
+    stop music fadeout 1.0
+    play music "sounds/darkcoffee.mp3"
+    scene black
 
     "It's raining.{w} As usual."
     "{cps=35}I lean back in my chair, put my arms up and stretch after another long day of classes.{/cps}"
@@ -224,6 +234,9 @@ label Juni_section:
     # scene black
     # with dissolve
     # stop sounds
+    jump juni2
+
+label juni2:
 
     scene st_john_north
     with fade
@@ -237,25 +250,27 @@ label Juni_section:
     "Jazz heads home with the usual amount of spring in her step."
     
     # novel mode
-    "By the time our first practice session was done, the sun was about a half hour away\
+    n "By the time our first practice session was done, the sun was about a half hour away\
     from setting - not that we could tell through all the rain."
-    "I look uphill at the long path between me and home. The view from my house is\
+    n "I look uphill at the long path between me and home. The view from my house is\
     unmatched when clear, but that's a rare occasion between fall and spring.\
     Perhaps I should ask my parents for a bike."
-    "I shake my head. How would I hold an umbrella while riding? Going any faster\
+    n "I shake my head. How would I hold an umbrella while riding? Going any faster\
     would mean riding into the rain, too."
-    "With a sigh, I start walking forward."
+    n "With a sigh, I start walking forward."
+    nvl clear
 
     # scene tree-lined intersection
-    "The light dims as I feel the sun drop lower in the sky. I'm a little over halfway home."
-    "Not many students live this way, and those that do left school before I did. The\
+    n "The light dims as I feel the sun drop lower in the sky. I'm a little over halfway home."
+    n "Not many students live this way, and those that do left school before I did. The\
     sidewalk is quiet and only the rare car passes by to break up the monotony of the\
     neverending rain."
-    "As I make my way forward, I begin to hear the splish-splash of someone running in the\
+    n "As I make my way forward, I begin to hear the splish-splash of someone running in the\
     rain heading in my direction.{w} It must be him again."
-    "I try my best to look forward without looking at him directly. The road is straight for\
+    n "I try my best to look forward without looking at him directly. The road is straight for\
     a good while here so I have no reason to feel odd about it, but I imagine it would still\
     be a bit off-putting to be staring at him during his entire approach."
+    nvl clear
 
     # dialogue mode
     # show jase jog
@@ -271,16 +286,26 @@ label Juni_section:
     "He appears to have the same idea."
     "Our eyes meet for a brief, awkward moment."
     
+    # "I blink,"
+    # scene black
+    # scene st_john_north
+    # "{cps=0}I blink, {/cps}and he's gone."
     "I blink,{w} and he's gone." #insert blink animation here.
+    
     # novel mode 
-    "I arc my head back and sigh at my umbrella.{w} Why did I do that?"
-    "I pass by him about once a week."
-    "His face is familiar but I can’t seem to remember his name."
-    "These are tracks my mind has worn down for a while now, but going through it again ought\
+    n "I arc my head back and sigh at my umbrella.{w} Why did I do that?"
+    n "I pass by him about once a week."
+    n "His face is familiar but I can’t seem to remember his name."
+    n "These are tracks my mind has worn down for a while now, but going through it again ought\
     to at least keep my mind off the rain long enough to get home."
-    "This jogger is on the other school’s Quiz Bowl team, but I don’t think I can say that\
+    n "This jogger is on the other school’s Quiz Bowl team, but I don’t think I can say that\
     we’ve ever met. I have seen him occasionally at regional tournaments, but we had never\
     exchanged words before until this summer. Even then, I don’t think I was ever the one who was talking to him."
+    nvl clear
+
+    jump juni3
+
+label juni3:
 
     # flashback time!
 
@@ -288,40 +313,42 @@ label Juni_section:
     # with fade
     scene black
     with dissolve
-    "During the summer, we held a scrimmage with the Quiz Bowl team from the private\
+    n "During the summer, we held a scrimmage with the Quiz Bowl team from the private\
     Catholic high school in the city."
     # play flashback music
-    "Our upperclassmen had been meaning to do this for years, but it was only when\
+    n "Our upperclassmen had been meaning to do this for years, but it was only when\
     Jazz earned her officer position this year that she could finally push it through."
     # scene talks
-    "She got in touch with her friend there - I think Audrey was the name.{w}"
-    "Even though she's a year younger than Jazz and I, she'd been named the president of\
+    n "She got in touch with her friend there - I think Audrey was the name.{w}"
+    n "Even though she's a year younger than Jazz and I, she'd been named the president of\
     their Quiz Bowl team, a fact I think Jazz was a bit envious of."
-    "From what she explained to me, Audrey herself seemed a bit insecure about it all.{w}\
+    n "From what she explained to me, Audrey herself seemed a bit insecure about it all.{w}\
     Eager to prove herself, she and Jazz set up the scrimmage at our high school."
-
+    nvl clear
     # new page
 
     # scene north_isle_classroom bw
-    "Because it was summer, our upperclassmen had graduated and our team hadn't yet\
+    n "Because it was summer, our upperclassmen had graduated and our team hadn't yet\
     been able to recruit Ryan and Kevin, so it was only me, Jazz, and Savan."
-    "They were in a similar predicament, with only Audrey, him, and a third person on the team."
-    "I remember him being a bit hesitant to sit as a team member, making the excuse that\
+    n "They were in a similar predicament, with only Audrey, him, and a third person on the team."
+    n "I remember him being a bit hesitant to sit as a team member, making the excuse that\
     he was only supposed to be the alternate. I found this odd because he was clearly the oldest\
     student on their team."
-    "After I dug out the same buzzer we used during practice today, we took our seats.\
+    n "After I dug out the same buzzer we used during practice today, we took our seats.\
     Savan had asked another friend to moderate, and so the game begun."
 
     
-    "For the reaction-time buzzer-beater questions, we were about evenly matched,\
+    n "For the reaction-time buzzer-beater questions, we were about evenly matched,\
     but not entirely because we were equally skilled."
-
+    nvl clear
 
 
     scene black
     with dissolve
 
+    jump juni0
 
+label juni0:
 
     ##############
     # Old filler #
@@ -348,13 +375,13 @@ label transition:
     if start_character == "Jase":
         if jase_complete:
             if not juni_complete:
-                jump Juni_section
+                jump juni1
         else:
             e "oh poopers"
     elif start_character == "Juni":
         if juni_complete:
             if not jase_complete:
-                jump Jase_section
+                jump jase1
         else:
             e "oh poopers x2"
     else:
