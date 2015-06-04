@@ -29,6 +29,16 @@ Press "shift+O" to access the debug menu. From there, enter the command "jump" a
 
 For instance, if you wanted to jump to Juni's second scene, type in "jump juni2".
 
+### Contributing
+
+#### StudioSTORIAN:
+
+If you're on StudioSTORIAN and want to directly push via the repository, give Carlin or Patrick your GitHub username, and we can add you to the contributors. If you have questions, ask Patrick or search for help on Google or GitHub's help pages.
+
+#### Others:
+
+I don't know how GitHub works, as I've stated before. We're not expecting random strangers to see this.
+
 ###
 
-If you have any questions, contact me via slack or email me at patrickgan2005@gmail.com.
+If you have any further questions, contact me via slack or email me at patrickgan2005@gmail.com.
