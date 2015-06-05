@@ -7,7 +7,7 @@ image black = "#000000"
 # image st_john = "st_john.png"
 image st_john_north = "images/crossing.jpg"
 image north_isle_school = "images/high-school.jpg"
-image north_isle_classroom = "images/basketballcourt.png"
+image north_isle_classroom = "images/library.jpg"
 image st_john_school = "images/school.png"
 # image academy_pacific = "academy_pacific.png"
 # image city = "city.png"
@@ -16,6 +16,10 @@ image st_john_school = "images/school.png"
 
 image jazz smile = "images/jordan.png"
 image juni smile = "images/barkley.png"
+image jazz = "images/jazz_test_l.png"
+image jazz cheeky = "images/jazz_test_l.png"
+image ryan = "images/barkley.png"
+image kevin = "images/jordan.png"
 
 # Declare characters used by this game.
 define e = Character('Eileen', color="#c8ffc8")
@@ -130,15 +134,14 @@ label juni1:
     with dissolve
     # play sound "crowd.mp3" fadein # loop
 
-    "The chatter around me builds up and dies down as my classmates pack their things and head home.{w}\
-    I won't be leaving nearly as soon."
+    "The chatter around me builds up and dies down as my classmates pack their things and head home."
     # scene notebook
     # with dissolve
-    "I take another look at my notebook, flipping through what I wrote down of Mr.\
+    "I take another look at my notebook, flipping through what I wrote down during Mr.\
     Schumacher's lecture today."
     "We'll be doing a practice essay question on the Protestant Reformation later this week,\
-    so I should make sure that I have what he covered this last section down pat."
-    "To my right, Mr. Schumacher is still talking to two more inquisitive students about\
+    so I need to make sure I understand everything he covered."
+    "To my right, Mr. Schumacher is still talking to two other students about\
     the reasons behind the creation of the Anglican Church."
     "Judging from their growing restlessness, I don't think they realized what they were in for."
     "As the last of the students leave, Jazz appears in the doorway."
@@ -146,6 +149,8 @@ label juni1:
     # stop sound "crowd.mp3" fadeout
     # play sound "footsteps.mp3" fadein
     # show jazz smile
+    show jazz at Position(xpos=0.5, xanchor=0.5, ypos=0.8, yanchor=0.5)
+        # linear 1.0 xalign 0.2
     # with dissolve
 
     z "Hey Juni!"
@@ -153,38 +158,44 @@ label juni1:
     # show juni smile
 
     u "Hi Jazz. How was the chemistry quiz?"
-    z "Mmm, nothing too bad. The hardest part was the ion balancing, and that was just\
+    z "Mmm, not too bad. The hardest part was the ion balancing, and that was just\
     because she didn't give us the periodic table."
 
     # another juni smile????
-    u "Ha, that's too bad. I'm sure it'll be given to you on the test-"
+    u "Ha, that's too bad. I'm sure they'll give it to you on the test-"
 
     # play sound "footsteps.mp3" fadein
 
-    "As the last two stragglers narrowly escape Mr. Schumacher’s neverending lesson on\
-    King Henry’s infidelities, they’re replaced by another pair of boys."
+    "As the last two students narrowly escape Mr. Schumacher’s neverending lesson on\
+    King Henry’s infidelities, Ryan and Kevin come in."
 
-    # show jazz cheeky
-    z "Hey you two! Good job remembering to come to practice today. I was afraid I was going\
-    to have to go and find you two again like last week."
+    hide jazz
+    show jazz cheeky at Position(xpos=0.5, xanchor=0.5, ypos=0.8, yanchor=0.5)
+    z "Hey you two! Good job remembering to come to practice today. I thought I was going\
+    to have to track you down again like last week."
 
-    "One of the boys beams back at Juni while the other tilts his head sheepishly.\
+    "Ryan beams back at Jazz while Kevin tilts his head sheepishly.\
     I'm glad Ryan has already learned how to deal with Jazz, but it looks like Kevin\
     might need a little more time to settle in."
 
+    hide jazz cheeky
+    show ryan at Position(xpos=0.7, xanchor=0.5, ypos=0.5, yanchor=0.5)
     r "Of course! We didn't join Quiz Bowl for nothing, right, Kevin?"
+    show kevin at Position(xpos=0.3, xanchor=0.5, ypos=0.5, yanchor=0.5)
     k "What can I say? You and Jazz - sorry, Jasmine - were pretty convincing."
-    "The three of them share a small chuckle before I remember something."
     # show jazz neutral
+    "As they talk, I remember something."
     # speaker juni smile
-    u "Oh, right, Jazz. You might already know this, but Savan is out sick today."
-    u "He told me to let you know that we should run the meeting as usual, and that\
+    hide ryan
+    hide kevin
+    u "Oh, right, Jazz. Savan's out sick today."
+    u "He told me to let you know to run the meeting as usual, and that\
     you'd know what to do."
-    z "Mm, yeah, he messaged me."
-    # show jazz smile
-    z "Alright, you two, I hope you've been reading up on the practice Quiz Bowl questions,\
-    because we're going to be doing your first-ever live buzzer beaters today!"
-    "Ryan perks up even more while it looks like it's taking Kevin everything not to\
+    show jazz at Position(xpos=0.5, xanchor=0.5, ypos=0.8, yanchor=0.5)
+    z "Yeah! He messaged me."
+    z "Okay, you two, I hope you've been reading up on Quiz Bowl questions,\
+    \'cause today we're going to be doing your first-ever live practice!"
+    "Ryan lights up even more while it looks like it's taking Kevin everything he has not to\
     roll his eyes and groan."
     r "With the buzzer?"
     z "With the buzzer."
@@ -197,13 +208,13 @@ label juni1:
     # juni smile
 
     u "Mr. Schumacher, do you mind if I get the buzzer from your cabinet?"
-    "As I get the dig through his cabinets trying to remember where we put the set last year,\
+    "As I dig through his cabinets trying to remember where we left the set last summer,\
     Jazz starts assigning the teams."
 
     # jazz :O
 
-    z "Alright, Ryan, how about you pair up with Kevin, and Juni... you're on your own."
-    u "Ehh? What about you?"
+    z "Alright, Ryan, how about you pair up with Kevin, and Juni...{w} you're on your own."
+    u "Wait, what? What about you?"
 
     # jazz neutral
 
@@ -218,17 +229,16 @@ label juni1:
 
     # juni surprise nervous sweat
     u "...Mr. Schumacher! Could you read the questions?"
-    "My erstwhile ally raises his hands and explains that he's already behind on grading,\
+    "He raises his hands and makes the excuse that he's already behind on grading,\
     leaving me on my own."
     "Defeated, I hand everyone their buzzers. Jazz takes out her binder full of past\
     questions and practice begins."
     z "First question: How many circles can be tangent to two parallel lines?"
-    "Ryan shouts, \"I know!\" but I've already hit the buzzer. I hope I'm not being too\
-    hard on them."
+    "Ryan shouts, \"I know!\" but I've already hit the buzzer. I hope I'm not being too hard on them."
 
     # scene ?
 
-    "The sounds of our ever-lively Quiz Bowl team drift out into the hallway as the rain\
+    "The sounds of our lively Quiz Bowl team drift out into the hallway as the rain\
     continues on without a care for my walk home."
 
     # scene black
@@ -244,43 +254,39 @@ label juni2:
     # show jazz cheeky umbrella
     z "Bye Juni! Careful around puddles!"
     "I stick my tongue out at her, remembering the last time I came to school with my\
-    cardigan wet after tripping into a puddle."
+    cardigan wet after tripping into one."
     # show Juni smile
-    u "See you tomorrow!"
-    "Jazz heads home with the usual amount of spring in her step."
+    u "Hpmh! See you tomorrow!"
+    "Jazz heads home with the usual spring in her step."
     
     # novel mode
-    n "By the time our first practice session was done, the sun was about a half hour away\
-    from setting - not that we could tell through all the rain."
-    n "I look uphill at the long path between me and home. The view from my house is\
-    unmatched when clear, but that's a rare occasion between fall and spring.\
-    Perhaps I should ask my parents for a bike."
-    n "I shake my head. How would I hold an umbrella while riding? Going any faster\
-    would mean riding into the rain, too."
+    n "By the time our first practice session was done, the sun was about to set behind the clouds."
+    n "I look uphill at the long path home. Maybe I should ask my parents for a bike."
+    n "I shake my head. How would I hold an umbrella while riding? Going any faster would mean riding into the rain, too."
     n "With a sigh, I start walking forward."
     nvl clear
 
     # scene tree-lined intersection
     n "The light dims as I feel the sun drop lower in the sky. I'm a little over halfway home."
-    n "Not many students live this way, and those that do left school before I did. The\
+    n "Not many students live this way, and the few that do left school before I did. The\
     sidewalk is quiet and only the rare car passes by to break up the monotony of the\
     neverending rain."
     n "As I make my way forward, I begin to hear the splish-splash of someone running in the\
     rain heading in my direction.{w} It must be him again."
     n "I try my best to look forward without looking at him directly. The road is straight for\
-    a good while here so I have no reason to feel odd about it, but I imagine it would still\
-    be a bit off-putting to be staring at him during his entire approach."
+    a good while here so I have no reason to feel weird about it, but I imagine it would still\
+    be a bit awkward to be staring at him the entire time."
     nvl clear
 
     # dialogue mode
     # show jase jog
     # play sound wet jogging, faint
-    "As usual, he's wearing a light raincoat and yet his hood isn't up."
+    "As usual, he's wearing a light raincoat but his hood isn't up."
     # show jase jog bigger
     "His head and hair must be soaked."
     # Jase gets closer
     "I can't even begin to imagine living like he does."
-    "It's absolutely disgusting, and yet my curiosity gets the better of me."
+    "And yet my curiosity gets the better of me."
     "Just before he passes by, I dart my eyes to get a better look at him."
     # even closer
     "He appears to have the same idea."
@@ -296,11 +302,10 @@ label juni2:
     n "I arc my head back and sigh at my umbrella.{w} Why did I do that?"
     n "I pass by him about once a week."
     n "His face is familiar but I can’t seem to remember his name."
-    n "These are tracks my mind has worn down for a while now, but going through it again ought\
-    to at least keep my mind off the rain long enough to get home."
+    n "These are tracks my mind has worn down for a while now, but going through it again should keep my mind off the rain long enough to get home."
     n "This jogger is on the other school’s Quiz Bowl team, but I don’t think I can say that\
-    we’ve ever met. I have seen him occasionally at regional tournaments, but we had never\
-    exchanged words before until this summer. Even then, I don’t think I was ever the one who was talking to him."
+    we’ve ever met."
+    n "I've seen him occasionally at regional tournaments, but I've never spoken to him directly."
     nvl clear
 
     jump juni3
@@ -313,14 +318,13 @@ label juni3:
     # with fade
     scene black
     with dissolve
-    n "During the summer, we held a scrimmage with the Quiz Bowl team from the private\
-    Catholic high school in the city."
+    n "In August, we held a scrimmage with his Quiz Bowl team, the one from the city's Catholic high school."
     # play flashback music
     n "Our upperclassmen had been meaning to do this for years, but it was only when\
-    Jazz earned her officer position this year that she could finally push it through."
+    Jazz earned her officer position that she finally pushed it through."
     # scene talks
-    n "She got in touch with her friend there - I think Audrey was the name.{w}"
-    n "Even though she's a year younger than Jazz and I, she'd been named the president of\
+    n "She got in touch with her friend there - I think Audrey was her name.{w}"
+    n "Even though she was a year younger than us, she'd been named the president of\
     their Quiz Bowl team, a fact I think Jazz was a bit envious of."
     n "From what she explained to me, Audrey herself seemed a bit insecure about it all.{w}\
     Eager to prove herself, she and Jazz set up the scrimmage at our high school."
@@ -330,18 +334,42 @@ label juni3:
     # scene north_isle_classroom bw
     n "Because it was summer, our upperclassmen had graduated and our team hadn't yet\
     been able to recruit Ryan and Kevin, so it was only me, Jazz, and Savan."
-    n "They were in a similar predicament, with only Audrey, him, and a third person on the team."
+    n "They were in a similar predicament, with only Audrey, him, and a third person on their team."
     n "I remember him being a bit hesitant to sit as a team member, making the excuse that\
-    he was only supposed to be the alternate. I found this odd because he was clearly the oldest\
-    student on their team."
+    he was only supposed to be the alternate.{w} I found this strange because he was clearly the oldest one on their team."
     n "After I dug out the same buzzer we used during practice today, we took our seats.\
-    Savan had asked another friend to moderate, and so the game begun."
-
-    
-    n "For the reaction-time buzzer-beater questions, we were about evenly matched,\
-    but not entirely because we were equally skilled."
+    Savan had asked another friend to moderate, and so the game began."
     nvl clear
 
+    n "For the reaction-time buzzer-beater questions, we were about evenly matched,\
+    but not entirely because we were equally skilled."
+    n "To my surprise, the jogger didn’t even pick up his buzzer.{w} Instead, he leaned back and stared off into space,\
+    seemingly in deep concentration yet producing no results."
+    n "At first, I thought that was dead weight to their team, but I was forced to\
+    reconsider when they won the opportunity to answer their first bonus question, the\
+    ones with no time pressure."
+    n "I don’t remember what the question was, but I do remember what he did."
+    n "Instead of going straight for it like I expected them to, Audrey and the other\
+    person turned to him and he just started talking.{w} Reasoning."
+    n" Whatever the question was, he began to explain everything, in meticulous detail.{w}\
+    He laid out each possible answer he came up with, and a thorough case of pros and cons\
+    for each choice."
+    nvl clear
+
+    n "All in all, he gave his team around five options and spent enough time on each decision\
+    to bore our team and the moderator to near tears."
+    n "It was clear that he hadn’t studied the material as hard as, say, Savan or I did,\
+    but his reasoning more than made up for it."
+    n "Jazz, Savan, and I exchanged a look as Audrey, after double-checking with their\
+    third member, chose what she decided was the strongest option the jogger offered as\
+    their answer for the moderator."
+    n "She also asked the jogger what he thought, but instead of picking any of his\
+    choices, all he could do was shrug.{w} Absolutely baffling."
+    n "And yet, as we knew, they were right."
+    n "This continued for the rest of the scrimmage. Although we were evenly matched for\
+    the buzzer questions, we were outperformed on the bonus questions thanks to him, and\
+    St. John’s Academy of Religious Studies won our first interscholastic scrimmage."
+    n "What a curious character."
 
     scene black
     with dissolve
