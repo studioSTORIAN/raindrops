@@ -10,34 +10,23 @@ Download their SDK to run.
 
 ### Usage
 
-##### If you don't use GitHub:
-
 You can download the current build of the game by downloading the ZIP file.
 
-##### If you do use GitHub:
+For easy updates, download the GitHub for Windows program, and click the "Clone in Desktop" button on the repository page. It should open up the GitHub client and prompt you to save in a local directory. Once that is completed, you can sync changes with a press of the "Sync" button once changes are uploaded.
 
-You can clone the repository on your desktop using the button on the page if you have the desktop app. 
-The sync button should sync all changes pushed to the repository onto your local repository.
-
-Alternatively, you can clone the repository through a git-enabled shell such as Git Bash or MinGW for Windows or via terminal on Mac or Linux. I'm not too good with GitHub myself, so I assume you'd be able to figure out how to do this if you go for the terminal option. Once you've cloned the repository, I believe you can use the "git pull" command in the repository to pull all new changes.
+Alternatively, you can clone the repository through a git-enabled shell such as Git Bash or MinGW for Windows or via terminal on Mac or Linux. I'm not too good with GitHub myself, so I assume you'd be able to figure out how to do this if you go for the terminal option. Once you've cloned the repository, the "git pull" command will pull all new changes.
 
 
 ### Debugging Options
 
-##### Jumping instructions:
 Press "shift+O" to access the debug menu. From there, enter the command "jump" and a string representing the label you would like to jump to. Currently, we have three (3) scenes for Juni, including a scene 0 that acts as filler, and one (1) scene for Jase, which is filler. 
 
-For instance, if you wanted to jump to Juni's second scene, type in "jump juni2".
+For instance, if you wanted to jump to Juni's second scene, type in "jump juni2". A list of Juni's scenes can be found by typing "juni_toc".
 
 ### Contributing
 
-##### StudioSTORIAN:
-
 If you're on StudioSTORIAN and want to directly push via the repository, give Carlin or Patrick your GitHub username, and we can add you to the contributors. If you have questions, ask Patrick or search for help on Google or GitHub's help pages.
 
-##### Others:
-
-I don't know how GitHub works, as I've stated before. We're not expecting random strangers to see this.
 
 ---
 
