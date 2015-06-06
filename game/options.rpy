@@ -193,7 +193,7 @@ init -1 python hide:
     ## Music that is played while the user is at the main menu.
 
     # config.main_menu_music = "main_menu_theme.ogg"
-    config.main_menu_music = "sounds/rain.mp3"
+    # config.main_menu_music = "sounds/rain.mp3"
 
 
     #########################################
@@ -303,9 +303,16 @@ init -1 python hide:
 
 init python:
     config.quit_action = Quit(confirm=False)
+    juni_toc = """Table of contents:\
+        Day 1\
+        juni1 - Just another day at North Isle High\
+        juni2 - Another passing on the walk home\
+        Day 2:\
+        juni3 - Lacklovester Afternoon (not implemened)\
+        Day 3:\
+        juni4 - One Morning's Mistakes (not implemented)"""
 
 # init python:
-    
 #     def skip(char,scn):
 #         char = input("Which character?")
 #         scn  = input("Which scene number?")
