@@ -301,6 +301,8 @@ init -1 python hide:
     # style.mm_button.yfill = True
     style.mm_frame.background = Solid((0,0,0,125))
 
+init python:
+    config.quit_action = Quit(confirm=False)
 
 # init python:
     
