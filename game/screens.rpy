@@ -207,14 +207,14 @@ screen main_menu():
         ground "images/jordanbw.png"
         hover "images/jordan.png"
         xalign 0
-        yalign .75
+        yalign 1.0
         hotspot (0,0,250,350) action Start("Jase_start")
 
     imagemap:
         ground "images/barkleybw.png"
         hover "images/barkley.png"
         xalign 1.2
-        yalign .75
+        yalign 1.0
         hotspot (85,0,265,350) action Start("Juni_start")
 
 init -2:
@@ -222,6 +222,7 @@ init -2:
     # Make all the main menu buttons be the same size.
     style mm_button:
         size_group "mm"
+        background None
 
 
 
@@ -247,8 +248,8 @@ screen navigation():
 
         textbutton _("Return") action Return()
         textbutton _("Preferences") action ShowMenu("preferences")
-        textbutton _("Save Game") action ShowMenu("save")
-        textbutton _("Load Game") action ShowMenu("load")
+        # textbutton _("Save Game") action ShowMenu("save")
+        # textbutton _("Load Game") action ShowMenu("load")
         textbutton _("Main Menu") action MainMenu()
         textbutton _("Help") action Help()
         textbutton _("Quit") action Quit(confirm=False)
@@ -585,3 +586,24 @@ init -2:
         selected_hover_color "#cc0"
         insensitive_color "#4448"
 
+
+########################################################################
+# Pause Menu
+#
+# Shows up when the player pauses the game. Displays relevant game info
+# such as character, chapter, day, and forecast.
+screen pause():
+    
+    tag menu
+    vbox:
+        style_group "pause"
+
+        xalign 5.0
+        yalign 5.0
+
+        textbutton _("resume") action Return()
+        textbutton _("options") action ShowMenu("preferences")
+        textbutton _("quit") action Quit()
+
+# init -2:
+#     style pause_button:

@@ -294,12 +294,12 @@ init -1 python hide:
     ## More customizations can go here.
 
     style.mm_button_text.hover_size = 28
-    style.mm_button.background = Solid((12,12,88,125))
+    style.mm_button.background = None # Solid((12,12,88,125))
     style.mm_frame.text_align = 0.5
     style.mm_button.xminimum = 200
     style.mm_button.yminimum = 50
     # style.mm_button.yfill = True
-    style.mm_frame.background = Solid((0,0,0,125))
+    style.mm_frame.background = None # Solid((0,0,0,125))
 
 init python:
     config.quit_action = Quit(confirm=False)
