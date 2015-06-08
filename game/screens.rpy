@@ -55,7 +55,7 @@ screen say(who, what, side_image=None, two_window=False):
         add SideImage() xalign 0.0 yalign 1.0
 
     # Use the quick menu.
-    use quick_menu
+    # use quick_menu
 
 
 ##############################################################################

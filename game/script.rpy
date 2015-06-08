@@ -72,7 +72,7 @@ label start:
     if start_character == "Jase":
         jump jase1
     else:
-        jump juni11
+        jump juni1
 
 label Jase_start:
     $ start_character = "Jase"
@@ -95,7 +95,7 @@ label jase1:
     jump transition
 
 
-label juni11: # Just another day at North Isle High
+label juni1: # Just another day at North Isle High
 
     # Begin Day 1 Juni
     # play sound "rain1.mp3" fadein
@@ -383,7 +383,7 @@ label transition:
     if start_character == "Jase":
         if jase_complete:
             if not juni_complete:
-                jump juni11
+                jump juni1
         else:
             e "oh poopers"
     elif start_character == "Juni":
