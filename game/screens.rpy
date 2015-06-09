@@ -650,6 +650,7 @@ screen chapters():
 
         textbutton _("Juni 1 - Just Another Day at North Isle High") action Jump(u'juni1')
         textbutton _("Juni 2 - Another Passing on the Walk Home") action Jump(u'juni2')
+        textbutton _("main menu") action ShowMenu("main_menu")
 
 init -2:
     style cm_button:

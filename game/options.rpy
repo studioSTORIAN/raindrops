@@ -152,7 +152,7 @@ init -1 python hide:
 
     ## The default size of text.
 
-    # style.default.size = 22
+    style.default.size = 22
 
     ## Note that these only change the size of some of the text. Other
     ## buttons have their own styles.
@@ -293,11 +293,11 @@ init -1 python hide:
     #########################################
     ## More customizations can go here.
 
-    style.mm_button_text.hover_size = 28
+    style.mm_button_text.hover_size = 24
     style.mm_button.background = None # Solid((12,12,88,125))
     style.mm_frame.text_align = 0.5
     style.mm_button.xminimum = 200
-    style.mm_button.ymaximum = 20
+    style.mm_button.yminimum = 30
     # style.mm_button.yfill = True
     style.mm_frame.background = None # Solid((0,0,0,125))
 
