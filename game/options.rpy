@@ -51,7 +51,7 @@ init -1 python hide:
         widget_hover = "#97d7bd",
 
         ## The color of the text in a widget.
-        widget_text = "#457b9f",
+        widget_text = "#000066",
 
         ## The color of the text in a selected widget. (For
         ## example, the current value of a preference.)
@@ -297,9 +297,17 @@ init -1 python hide:
     style.mm_button.background = None # Solid((12,12,88,125))
     style.mm_frame.text_align = 0.5
     style.mm_button.xminimum = 200
-    style.mm_button.yminimum = 50
+    style.mm_button.ymaximum = 20
     # style.mm_button.yfill = True
     style.mm_frame.background = None # Solid((0,0,0,125))
+
+    style.pm_root.background = "images/road.png"
+    style.pm_frame.text_align = 0.5
+    style.pm_frame.background = None
+    style.pm_button.background = Solid((0,0,0,255))
+
+
+
 
 init python:
     config.quit_action = Quit(confirm=False)
@@ -321,6 +329,12 @@ init python:
 #         renpy.jump(dest)
 
 #     skip = skip()
+
+
+
+
+
+
 
 ## This section contains information about how to build your project into
 ## distribution files.

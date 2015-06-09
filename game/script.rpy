@@ -69,6 +69,7 @@ label splashscreen:
 label start:
     $ jase_complete = False
     $ juni_complete = False
+    $ _game_menu_screen = "pause_menu"
     if start_character == "Jase":
         jump jase1
     else:

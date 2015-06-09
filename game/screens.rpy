@@ -195,11 +195,12 @@ screen main_menu():
         has vbox
 
 
-        textbutton _("start") action NullAction() #Start()
-        textbutton _("continue") action ShowMenu("load")
+        textbutton _("start") action NullAction() # Start()
+        # textbutton _("continue") action Return() # ShowMenu("load")
+        textbutton _("chapters") action ShowMenu("chapters")
         textbutton _("options") action ShowMenu("preferences")
         # textbutton _("help") action Help()
-        textbutton _("extras") action NullAction()
+        # textbutton _("extras") action NullAction()
         textbutton _("quit") action Quit(confirm=False)
 
     # Left and Right Characters
@@ -223,7 +224,6 @@ init -2:
     style mm_button:
         size_group "mm"
         background None
-
 
 
 ##############################################################################
@@ -592,18 +592,65 @@ init -2:
 #
 # Shows up when the player pauses the game. Displays relevant game info
 # such as character, chapter, day, and forecast.
-screen pause():
+screen pause_menu():
     
     tag menu
-    vbox:
-        style_group "pause"
 
-        xalign 5.0
-        yalign 5.0
+    window:
+        style "pm_root"
 
-        textbutton _("resume") action Return()
+    # vbox:
+    #     style_group "pause"
+
+    #     xalign 5.0
+    #     yalign 5.0
+
+    #     textbutton _("resume") action Return()
+    #     textbutton _("options") action ShowMenu("preferences")
+    #     textbutton _("quit") action Quit()
+    frame:
+        style_group "pm"
+        xalign .5
+        yalign .5
+
+        has vbox
+        
+        # pos (0.5, 0.5)
+        # anchor (0.5, 0.5)
+        
+        textbutton _("continue") action Return()
+        # textbutton _("Save Game") action ShowMenu("save")
+        # textbutton _("Load Game") action ShowMenu("load")
+        textbutton _("chapters") action ShowMenu("chapters")
         textbutton _("options") action ShowMenu("preferences")
-        textbutton _("quit") action Quit()
+        textbutton _("quit to menu") action MainMenu()
+        # textbutton _("Help") action Help()
+        textbutton _("quit to desktop") action Quit()
 
-# init -2:
-#     style pause_button:
+init -2:
+    style pm_button:
+        size_group "pm"
+
+
+##################
+# Chapter selection
+#
+# Jump chapters.
+screen chapters():
+
+    tag menu
+    window:
+        style "cm_root"
+    frame:
+        style_group "cm"
+        xalign .5
+        yalign .5
+
+        has vbox
+
+        textbutton _("Juni 1 - Just Another Day at North Isle High") action Jump(u'juni1')
+        textbutton _("Juni 2 - Another Passing on the Walk Home") action Jump(u'juni2')
+
+init -2:
+    style cm_button:
+        size_group "cm"
