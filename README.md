@@ -23,6 +23,8 @@ Press "shift+O" to access the debug menu. From there, enter the command "jump" a
 
 For instance, if you wanted to jump to Juni's second scene, type in "jump juni2". A list of Juni's scenes can be found by typing "juni_toc".
 
+*EDIT:* I have added a Chapters button, which can be accessed from the main and pause menus. No need to open the console to jump around.
+
 ### Contributing
 
 If you're on StudioSTORIAN and want to directly push via the repository, give Carlin or Patrick your GitHub username, and we can add you to the contributors. If you have questions, ask Patrick or search for help on Google or GitHub's help pages.
