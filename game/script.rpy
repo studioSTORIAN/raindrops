@@ -104,7 +104,7 @@ label juni1: # Just another day at North Isle High
     scene black
 
     "It's raining.{w} As usual."
-    play music "sounds/darkcoffee.mp3"
+    play music "sounds/dankcoffee.mp3"
     "{cps=35}I lean back in my chair, put my arms up and stretch after another long day of classes.{/cps}"
 
     scene north_isle_classroom
