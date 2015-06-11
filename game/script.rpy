@@ -101,10 +101,10 @@ label juni1: # Just another day at North Isle High
     # Begin Day 1 Juni
     # play sound "rain1.mp3" fadein
     stop music fadeout 1.0
-    play music "sounds/darkcoffee.mp3"
     scene black
 
     "It's raining.{w} As usual."
+    play music "sounds/darkcoffee.mp3"
     "{cps=35}I lean back in my chair, put my arms up and stretch after another long day of classes.{/cps}"
 
     scene north_isle_classroom
