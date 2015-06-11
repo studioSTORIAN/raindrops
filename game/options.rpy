@@ -293,7 +293,7 @@ init -1 python hide:
     #########################################
     ## More customizations can go here.
 
-    style.mm_button_text.hover_size = 24
+    style.mm_button_text.hover_color = "#EEF0F2"
     style.mm_button.background = None # Solid((12,12,88,125))
     style.mm_frame.text_align = 0.5
     style.mm_button.xminimum = 200
