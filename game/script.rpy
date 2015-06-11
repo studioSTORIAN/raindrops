@@ -122,6 +122,7 @@ label juni1: # Just another day at North Isle High
     the reasons behind the creation of the Anglican Church."
     "Judging from their growing restlessness, I don't think they realized what they were in for."
     "As the last of the students leave, Jazz appears in the doorway."
+    stop music fadeout 1.0
 
     # stop sound "crowd.mp3" fadeout
     # play sound "footsteps.mp3" fadein
