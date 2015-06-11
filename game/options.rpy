@@ -45,10 +45,10 @@ init -1 python hide:
         ## Color scheme: Parachute Pants
 
         ## The color of an idle widget face.
-        widget = "#53c7bb",
+        widget = "#6987C9",
 
         ## The color of a focused widget face.
-        widget_hover = "#97d7bd",
+        widget_hover = "#A3BEED",
 
         ## The color of the text in a widget.
         widget_text = "#000066",
@@ -58,10 +58,10 @@ init -1 python hide:
         widget_selected = "#37397f",
 
         ## The color of a disabled widget face.
-        disabled = "#53c7bb",
+        disabled = "#A2999E",
 
         ## The color of disabled widget text.
-        disabled_text = "#97d7bd",
+        disabled_text = "#EEF0F2",
 
         ## The color of informational labels.
         label = "#cce2ae",
@@ -304,7 +304,7 @@ init -1 python hide:
     style.pm_root.background = "images/road.png"
     style.pm_frame.text_align = 0.5
     style.pm_frame.background = None
-    style.pm_button.background = Solid((0,0,0,255))
+    # style.pm_button.background = Solid((0,0,0,255))
 
 
 
