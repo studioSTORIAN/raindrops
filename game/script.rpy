@@ -105,7 +105,7 @@ label juni1: # Just another day at North Isle High
 
     "It's raining.{w} As usual."
     play music "sounds/dankcoffee.mp3"
-    "{cps=35}I lean back in my chair, put my arms up and stretch after another long day of classes.{/cps}"
+    "{cps=35}I lean back in my chair, put my arms up, and stretch after another long day of classes.{/cps}"
 
     scene north_isle_classroom
     with dissolve
@@ -120,7 +120,7 @@ label juni1: # Just another day at North Isle High
     so I need to make sure I understand everything he covered."
     "To my right, Mr. Schumacher is still talking to two other students about
     the reasons behind the creation of the Anglican Church."
-    "Judging from their growing restlessness, I don't think they realized what they were in for."
+    "Judging from how antsy they're getting, I don't think they realized what they were in for."
     "As the last of the students leave, Jazz appears in the doorway."
     stop music fadeout 1.0
 
@@ -229,7 +229,7 @@ label juni2: # Another Passing on the Walk Home
     # play sound rain 
     # show jazz cheeky umbrella
     Z "Bye Juni! Careful around puddles!"
-    "I stick my tongue out at her, remembering the many times I came to school soaked from tripping into a puddle."
+    "I stick my tongue out at her. Admittedly, if I did fall into a puddle on the way back it wouldn’t be the first time."
     # show Juni smile
     U "Hpmh! See you tomorrow!"
     "Jazz heads home with the usual spring in her step."
@@ -275,10 +275,12 @@ label juni2: # Another Passing on the Walk Home
     
     # novel mode 
     n "I arc my head back and sigh at my umbrella.{w} Why did I do that?"
-    n "Resuming my walk home, I start to think back on what I know of him."
+    nvl clear
+    
+    n "Continuing my walk home, I start to think back on what I know of him."
+    n "These are tracks my mind has worn down for a while now, but going through it again should keep my mind off the rain long enough to get home."
     n "I pass by him about once a week."
     n "His face is familiar but I can't seem to remember his name."
-    n "These are tracks my mind has worn down for a while now, but going through it again should keep my mind off the rain long enough to get home."
     n "This jogger is on the other school's Quiz Bowl team, but I don't think I can say that we've ever met."
     n "I've seen him occasionally at regional tournaments, but I've never spoken to him directly."
     nvl clear
