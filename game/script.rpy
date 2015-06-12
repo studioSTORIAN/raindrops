@@ -356,7 +356,7 @@ label juni2:
     scene black
     with dissolve
 
-    jump juni0
+    jump transition
 
 label juni0:
 
