@@ -380,7 +380,7 @@ label juni3: # Lacklovester Afternoon
     S "What can I say? I’m bad with names, you know."
     R "It’s okay Jazz, I don’t really mind. We’ve only had, like, three meetings so far, right?"
 label juni31:
-    "Begrudgingly, Jazz plops back in her seat [[with arms crossed]."
+    "Begrudgingly, Jazz drops back in her seat."
     R "That reminds me — all three of you are seniors, so what was the club like before I joined?"
     #hide jazz annoyed
     #show jazz thoughtful
@@ -395,7 +395,7 @@ label juni31:
     #hide juni thoughtful
     #hide jazz thoughtful
     #show jazz surprised
-    Z "Me? No way."
+    Z "Me? No way!"
     S "Ha. Don’t get ahead of yourself, kid. She may not look it, Jazz has absolutely zero experience with relationships."
     #hide jazz surprised
     #show jazz glare
@@ -445,19 +445,19 @@ label juni31:
     S "Even if that’s true, you never really returned their interest either, now did you?"
     U "Well…"
     R "So you’ve never been in a relationship either?"
-    U "...I guess not. I’ve never really been interested, I guess."
+    U "…I guess not. I’ve never really been interested in them."
     "Ryan leans back in his chair, crosses his arms, and shrugs at the ceiling."
     R "Why not?"
     "I’m a bit taken aback at this question, but I should’ve seen it coming. It’s a question I’ve never really thought over."
-    U "I think it would distract me from my classes."
-    "But that’s an excuse. Even so, he seems satisfied with my answer."
+    U "…I think it would distract me from my classes."
+    "But that’s an excuse.{w} Even so, he seems satisfied with my answer."
     R "Well, if you’re ever looking—"
-    "With a reaction time that would put a goalie to shame, Jazz lets go of Savan and pounces on me, hugging me again and stating firmly,"
-    Z "No! Juni is mine, and that’s final!"
+    "With a reaction time that would put an Olympic goalie to shame, Jazz lets go of Savan and pounces on me, hugging me again and stating firmly,"
+    Z "No way I’d let you! Juni is mine, and that’s final!"
     "Sighing, I accept her love."
     S "What’d I say earlier, kid?"
-    R "Haha. Well, I will say that they didn’t call me Randy Ryan in junior high for nothing."
-    "I have to admit, even though he’s brazen, Ryan has a certain air of shameless charisma about him.{w} Too bad for him, Jazz and I just aren’t interested."
+    R "Haha. Well, they didn’t call me Randy Ryan in junior high for nothing."
+    "I have to admit, even though he’s brazen, Ryan has a certain air of shameless charisma about him.{w} Too bad for him Jazz and I just aren’t interested."
     "Eager to end this conversation, I check the windows and make my decision."
     U "The rain looks like it’s lightened up, so I think I’ll start heading home."
     "Briskly grabbing my backpack and umbrella before anyone has a chance to respond, I make my way out the door.{w} Ryan looks a bit surprised, but Jazz and Savan know exactly what I’m doing."
@@ -468,9 +468,10 @@ label juni31:
 
     n "As I walk down the hallway to the main doors, my head is still filled with uncomfortable thoughts about my lackluster love life."
     n "Fiddling with my umbrella, another girl compliments me warmly on its design, a mesh of maple leaves laid over a transparent film, as if I’m carrying a tree’s canopy with me wherever I go."
-    n "I smile and thank her, forgetting about my troubles for a moment. The cute, colorful design takes some of the edge off of wading through the everyday downpour."
+    n "I smile and thank her, forgetting about my troubles for just a moment.{w} The cute, colorful design takes some of the edge off of wading through the everyday downpour."
     n "Jazz really outdid herself with her birthday gift this year."
-    n "Even if it can’t fold up and into my backpack like hers does, the lovely pattern more than makes up for it."
+    n "Even though it can’t fit in my backpack like hers does, the lovely pattern more than makes up for it."
+    n "I’ll make sure to let her know about the compliments I’ve been getting."
     nvl clear
     
     n "I step outside."

@@ -1,0 +1,18 @@
+﻿
+Ren'Py 6.99.4.467 lint report, generated at: Fri Jun 12 14:27:21 2015
+
+game/script.rpy:18 Image jazz beam uses file 'images/jazz_smile_less.png', which is not loadable.
+
+
+Statistics:
+
+The game contains 192 dialogue blocks, containing 2,845 words and 15,264
+characters, for an average of 14.8 words and 80 characters per block.
+
+The game contains 0 menus, 12 images, and 14 screens.
+
+
+Remember to set config.developer to False before releasing.
+
+Lint is not a substitute for thorough testing. Remember to update Ren'Py
+before releasing. New releases fix bugs and improve compatibility.
