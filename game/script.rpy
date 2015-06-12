@@ -26,19 +26,19 @@ image kevin = "images/jordan.png"
 define e = Character('Eileen', color="#c8ffc8")
 define l = Character(_("TARS"), color="#ffcccc")
 
-define u = Character("Juni", color="#ff0000")
-define z = Character("Jazz", color="#ffcccc")
-define e = Character("Jase", color="#0000ff")
-define c = Character("Mark", color="#ccccff")
-define s = Character("Savan")
-define r = Character("Ryan")
-define k = Character("Kevin")
-define a = Character("Audrey")
+define U = Character("Juni", color="#ff0000")
+define Z = Character("Jazz", color="#ffcccc")
+define E = Character("Jase", color="#0000ff")
+define C = Character("Mark", color="#ccccff")
+define S = Character("Savan")
+define R = Character("Ryan")
+define K = Character("Kevin")
+define A = Character("Audrey")
 
-define jase = e
-define juni = u
-define mark = c
-define jazz = z
+define jase = E
+define juni = U
+define mark = C
+define jazz = Z
 
 define n = Character(None, kind=nvl)
 
@@ -131,16 +131,16 @@ label juni1: # Just another day at North Isle High
         # linear 1.0 xalign 0.2
     # with dissolve
 
-    z "Hey Juni!"
+    Z "Hey Juni!"
 
     # show juni smile
 
-    u "Hi Jazz. How was the chemistry quiz?"
-    z "Mmm, not too bad. The hardest part was the ion balancing, and that was just
+    U "Hi Jazz. How was the chemistry quiz?"
+    Z "Mmm, not too bad. The hardest part was the ion balancing, and that was just
     because she didn't give us the periodic table."
 
     # another juni smile????
-    u "Ha, that's too bad. I'm sure they'll give it to you on the test-"
+    U "Ha, that's too bad. I'm sure they'll give it to you on the test-"
 
     # play sound "footsteps.mp3" fadein
 
@@ -149,7 +149,7 @@ label juni1: # Just another day at North Isle High
 
     hide jazz
     show jazz cheeky at Position(xpos=0.5, xanchor=0.5, ypos=0.8, yanchor=0.5)
-    z "Hey you two! Good job remembering to come to practice today. I thought I was going
+    Z "Hey you two! Good job remembering to come to practice today. I thought I was going
     to have to track you down again like last week."
 
     "Ryan beams back at Jazz while Kevin tilts his head sheepishly.
@@ -158,24 +158,24 @@ label juni1: # Just another day at North Isle High
 
     hide jazz cheeky
     show ryan at Position(xpos=0.7, xanchor=0.5, ypos=0.5, yanchor=0.5)
-    r "Of course! We didn't join Quiz Bowl for nothing, right, Kevin?"
+    R "Of course! We didn't join Quiz Bowl for nothing, right, Kevin?"
     show kevin at Position(xpos=0.3, xanchor=0.5, ypos=0.5, yanchor=0.5)
-    k "What can I say? You and Jazz - sorry, Jasmine - were pretty convincing."
+    K "What can I say? You and Jazz - sorry, Jasmine - were pretty convincing."
     # show jazz neutral
     "As they talk, I remember something."
     # speaker juni smile
     hide ryan
     hide kevin
-    u "Oh, right, Jazz. Savan's out sick today."
-    u "He told me to let you know to run the meeting as usual, and that you'd know what to do."
+    U "Oh, right, Jazz. Savan's out sick today."
+    U "He told me to let you know to run the meeting as usual, and that you'd know what to do."
     show jazz at Position(xpos=0.5, xanchor=0.5, ypos=0.8, yanchor=0.5)
-    z "Yeah! He messaged me."
-    z "Okay, you two, I hope you've been reading up on Quiz Bowl questions,
+    Z "Yeah! He messaged me."
+    Z "Okay, you two, I hope you've been reading up on Quiz Bowl questions,
     \'cause today we're going to be doing your first-ever live practice!"
     "Ryan lights up even more while it looks like it's taking Kevin everything he has not to
     roll his eyes and groan."
-    r "With the buzzer?"
-    z "With the buzzer."
+    R "With the buzzer?"
+    Z "With the buzzer."
 
     # 
 
@@ -184,33 +184,33 @@ label juni1: # Just another day at North Isle High
 
     # juni smile
 
-    u "Mr. Schumacher, do you mind if I get the buzzer from your cabinet?"
+    U "Mr. Schumacher, do you mind if I get the buzzer from your cabinet?"
     "As I dig through his cabinets trying to remember where we left the set last summer,
     Jazz starts assigning the teams."
 
     # jazz :O
 
-    z "Alright, Ryan, how about you pair up with Kevin, and Juni...{w} you're on your own."
-    u "Wait, what? What about you?"
+    Z "Alright, Ryan, how about you pair up with Kevin, and Juni...{w} you're on your own."
+    U "Wait, what? What about you?"
 
     # jazz neutral
 
-    z "I'm moderating, of course. Someone has to read the questions if Savan isn't here."
+    Z "I'm moderating, of course. Someone has to read the questions if Savan isn't here."
 
     # juni pout
 
-    u "But, Jazz..."
-    z "Juni, you already know these like the back of your hand. The only way these two
+    U "But, Jazz..."
+    Z "Juni, you already know these like the back of your hand. The only way these two
     can win is by having a faster reaction time, and you're pretty good at that, too."
-    z "If anything, Savan would've asked you to handicap yourself anyway."
+    Z "If anything, Savan would've asked you to handicap yourself anyway."
 
     # juni surprise nervous sweat
-    u "...Mr. Schumacher! Could you read the questions?"
+    U "...Mr. Schumacher! Could you read the questions?"
     "He raises his hands and makes the excuse that he's already behind on grading,
     leaving me on my own."
     "Defeated, I hand everyone their buzzers. Jazz takes out her binder full of past
     questions and practice begins."
-    z "First question: How many circles can be tangent to two parallel lines?"
+    Z "First question: How many circles can be tangent to two parallel lines?"
     "Ryan shouts, \"I know!\" but I've already hit the buzzer. I hope I'm not being too hard on them."
 
     # scene ?
@@ -221,19 +221,17 @@ label juni1: # Just another day at North Isle High
     # scene black
     # with dissolve
     # stop sounds
-    jump juni2
 
-label juni2:
+label juni2: # Another Passing on the Walk Home
 
     scene st_john_north
     with fade
     # play sound rain 
     # show jazz cheeky umbrella
-    z "Bye Juni! Careful around puddles!"
-    "I stick my tongue out at her, remembering the last time I came to school with my
-    cardigan wet after tripping into one."
+    Z "Bye Juni! Careful around puddles!"
+    "I stick my tongue out at her, remembering the many times I came to school soaked from tripping into a puddle."
     # show Juni smile
-    u "Hpmh! See you tomorrow!"
+    U "Hpmh! See you tomorrow!"
     "Jazz heads home with the usual spring in her step."
     
     # novel mode
@@ -277,11 +275,11 @@ label juni2:
     
     # novel mode 
     n "I arc my head back and sigh at my umbrella.{w} Why did I do that?"
+    n "Resuming my walk home, I start to think back on what I know of him."
     n "I pass by him about once a week."
     n "His face is familiar but I can't seem to remember his name."
     n "These are tracks my mind has worn down for a while now, but going through it again should keep my mind off the rain long enough to get home."
-    n "This jogger is on the other school's Quiz Bowl team, but I don't think I can say that
-    we've ever met."
+    n "This jogger is on the other school's Quiz Bowl team, but I don't think I can say that we've ever met."
     n "I've seen him occasionally at regional tournaments, but I've never spoken to him directly."
     nvl clear
 
@@ -305,13 +303,11 @@ label juni2:
     # new page
 
     # scene north_isle_classroom bw
-    n "Because it was summer, our upperclassmen had graduated and our team hadn't yet
-    been able to recruit Ryan and Kevin, so it was only me, Jazz, and Savan."
+    n "Because it was summer, our upperclassmen had graduated and our team hadn't yet been able to recruit Ryan and Kevin, so it was only me, Jazz, and Savan."
     n "They were in a similar predicament, with only Audrey, him, and a third person on their team."
     n "I remember him being a bit hesitant to sit as a team member, making the excuse that
     he was only supposed to be the alternate.{w} I found this strange because he was clearly the oldest one on their team."
-    n "After I dug out the same buzzer we used during practice today, we took our seats.
-    Savan had asked another friend to moderate, and so the game began."
+    n "After I dug out the same buzzer we used during practice today, we took our seats. Savan had asked another friend to moderate, and so the game began."
     nvl clear
 
     n "For the reaction-time buzzer-beater questions, we were about evenly matched,
@@ -352,29 +348,147 @@ label juni2:
     # scene juni house
     n "As I climb up the steps to my house, I shake my head."
     n "I can't even begin to imagine what he's thinking."
+    nvl clear
 
     scene black
     with dissolve
 
-    jump transition
+label juni3: # Lacklovester Afternoon
+    # scene class
+    # play sound heavy rain
+    n "After another day of class, Jazz and I find ourselves in Mr. Schumacher’s room again, even though we don’t have practice."
+    n "Savan’s back today, too."
+    n "(I have a sneaking suspicion that he wasn’t sick yesterday either, but I’ll keep it to myself.)"
+    n "More often than not, we spend time in Mr. Schumacher’s room after school, waiting for the rain to let up before we start heading home."
+    n "Before they graduated, our upperclassmen in Quiz Bowl did the same thing, and I guess we picked it up from them."
+    nvl clear
 
+    R "Heyo!"
+    "As if to punctuate my thought, Ryan pokes his head in the door."
+    show jazz smile
+    Z "No Kevin today?"
+    R "Like I said, it’s hard enough to get him to come to practice. No way in hell could I convince him to hang out here."
+    "Mr. Schumacher had already left to coach the weightlifting team, leaving us in charge of his room.{w} Following school regulations, he had locked the door, so we propped it open in case anyone wanted to visit or drop something off for him.{w} Sure enough, someone did."
+    S "What brings you here today, uh—"
+    U "Ryan."
+    S "Right, Ryan."
+    #hide jazz smile
+    #show jazz annoyed
+    "Jazz stands up and leans over her desk to berate Savan."
+    Z "Come on, Savan, he and Kevin have been in the club for a month now. Is the president knowing the names of our two new members too much to ask?"
+    "Savan, cool as ever, just tilts his head and shrugs."
+    S "What can I say? I’m bad with names, you know."
+    R "It’s okay Jazz, I don’t really mind. We’ve only had, like, three meetings so far, right?"
+label juni31:
+    "Begrudgingly, Jazz plops back in her seat [[with arms crossed]."
+    R "That reminds me — all three of you are seniors, so what was the club like before I joined?"
+    #hide jazz annoyed
+    #show jazz thoughtful
+    #show juni thoughtful
+    "The three of us think for a bit."
+    S "Well, I don’t think it was much different from now, you know?"
+    U "Quiz Bowl has always been a very small and tight-knit club."
+    Z "In fact, we usually don’t recruit, but after two of us graduated last year, we had to step it up or be at a disadvantage for competition."
+    R "Really? What were they like?"
+    U "Well…"
+    "The conversation goes on in much the same fashion as the rain continues hitting the classroom windows. Showing no signs of letting up, our conversation drifts from team history to—"
+    #hide juni thoughtful
+    #hide jazz thoughtful
+    #show jazz surprised
+    Z "Me? No way."
+    S "Ha. Don’t get ahead of yourself, kid. She may not look it, Jazz has absolutely zero experience with relationships."
+    #hide jazz surprised
+    #show jazz glare
+    Z "I will {i}kill{/i} you."
+    "As Jazz and Savan sass each other, Ryan and I share a look."
+    "Someone unkind and uncreative would probably describe these two as an old married couple.{w} I’d say they’re more like brother and sister."
+    S "Well, is it not objective truth that you’ve never been in a relationship?"
+    #hide jazz glare
+    #show jazz pout
+    Z "Well, yes..."
+    "Turning back to Ryan, Savan says,"
+    S "So now your question would be why, right?"
+    "Ryan nods eagerly, oblivious to the trouble brewing in front of him."
+    S "If I had to guess, it’s because of your standards."
+    #hide jazz pout
+    #show jazz serious
+    "Jazz goes silent as I sense imminent danger."
+    S "They’re just too high, ya bitch. You’re just too damn picky."
+    "Wait, no, stop, you’re hitting too close to home!"
+    # screen shakes
+    # hide jazz serious
+    # show jazz exclaim
+    Z "You’re wrong!"
+    "Instead of going for Savan this time, Jazz turns to me in a flurry."
+    "She hugs,{w} clutches me from the side.{w} Very,{w} very{w} tightly."
+    "Near tears, she exclaims,"
+    Z "No one can separate our love!"
+    # hide jazz exclaim
+    # show jazz hug
+    "Inside her iron grip, I smile genuinely and laugh nervously.{w} I’m glad she feels (and grabs) so strongly but I don’t think I can reciprocate."
+    "After a few moments, Jazz breaks and gives Ryan another one of her cheeky looks before letting go and recomposing herself."
+    "She was joking.{w} Probably."
+    S "Well, you know, despite her appearance, Juni is surprisingly popular too."
+    "Hey!"
+    # hide jazz hug
+    # show jazz glare
+    Z "You have a death wish, don’t you?"
+    "Savan raises his palms up to protect his face, smirking the entire time."
+    S "I don’t know, maybe they find her perpetual bedhead cute?"
+    # SCN: Juni disapproving
+    # SCN: Juni looking up cute
+    "As Jazz gets up to punish Savan some more, I paw at one of my unkempt locks."
+    "It’s more that, no matter how much time I spend on it in the morning, my hair and the weather refuse to get along and, considering the climate, it’s always humid."
+    "Meanwhile, Savan squirms his head out of Jazz’s chokehold to respond to Ryan’s quizzical expression."
+    S "Juni has rejected her fair share of dates, you know."
+    U "I’m telling you, I just don’t like going to dances."
+    S "Even if that’s true, you never really returned their interest either, now did you?"
+    U "Well…"
+    R "So you’ve never been in a relationship either?"
+    U "...I guess not. I’ve never really been interested, I guess."
+    "Ryan leans back in his chair, crosses his arms, and shrugs at the ceiling."
+    R "Why not?"
+    "I’m a bit taken aback at this question, but I should’ve seen it coming. It’s a question I’ve never really thought over."
+    U "I think it would distract me from my classes."
+    "But that’s an excuse. Even so, he seems satisfied with my answer."
+    R "Well, if you’re ever looking—"
+    "With a reaction time that would put a goalie to shame, Jazz lets go of Savan and pounces on me, hugging me again and stating firmly,"
+    Z "No! Juni is mine, and that’s final!"
+    "Sighing, I accept her love."
+    S "What’d I say earlier, kid?"
+    R "Haha. Well, I will say that they didn’t call me Randy Ryan in junior high for nothing."
+    "I have to admit, even though he’s brazen, Ryan has a certain air of shameless charisma about him.{w} Too bad for him, Jazz and I just aren’t interested."
+    "Eager to end this conversation, I check the windows and make my decision."
+    U "The rain looks like it’s lightened up, so I think I’ll start heading home."
+    "Briskly grabbing my backpack and umbrella before anyone has a chance to respond, I make my way out the door.{w} Ryan looks a bit surprised, but Jazz and Savan know exactly what I’m doing."
+    U "Bye everyone!"
+    "Jazz will know well enough to keep Ryan preoccupied until I’m out of sight and mind."
+    
+    scene black with fade 
+
+    n "As I walk down the hallway to the main doors, my head is still filled with uncomfortable thoughts about my lackluster love life."
+    n "Fiddling with my umbrella, another girl compliments me warmly on its design, a mesh of maple leaves laid over a transparent film, as if I’m carrying a tree’s canopy with me wherever I go."
+    n "I smile and thank her, forgetting about my troubles for a moment. The cute, colorful design takes some of the edge off of wading through the everyday downpour."
+    n "Jazz really outdid herself with her birthday gift this year."
+    n "Even if it can’t fold up and into my backpack like hers does, the lovely pattern more than makes up for it."
+    nvl clear
+    
+    n "I step outside."
+    n "Under the awning before the main doors, I take a deep breath, click open my umbrella, and dive into the dreaded rain."
+    #BKG: path between
+    n "Aside from the rain having drawn down to a light sprinkle, my walk home is uneventful. "
+    n "By the time I pass the halfway point to home, sunlight has started breaking through the clouds."
+    n "I look up and smile at the rays brightening my spirits after that draining conversation."
+    n "…Though for some reason I feel lonelier than usual."
+    nvl clear
+
+label juni4:
+label juni5:
 label juni0:
-
-    ##############
-    # Old filler #
-    ##############
-
-    juni "My name is Juniper Young."
-
-    jazz "We just call her Juni. She hates rain."
-
-    juni "You can stay under my umbrella, eh!"
-
-    "End Juni section. Congratulations!"
-
+    # End Juni section
     $ juni_complete = True
-
     jump transition
+
 
 
 label transition:
