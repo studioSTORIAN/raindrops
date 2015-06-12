@@ -51,7 +51,7 @@ label splashscreen:
     scene black
     with Pause(1)
 
-    show text "Studio STORIAN Presents..." with dissolve
+    show text "studio STORIAN presents" with dissolve
     with Pause(2)
 
     hide text with dissolve
@@ -483,8 +483,48 @@ label juni31:
     n "…Though for some reason I feel lonelier than usual."
     nvl clear
 
-label juni4:
-label juni5:
+label juni4: # One Morning’s Mistakes
+    n "Bright and early, I wake up before my alarm.{w} After sitting up and stretching, I turn to disable it before it has a chance to go off."
+    n "Outside my window, the sky is clear save for a few decorative clouds.{w} Yesterday’s downpour must have rained out the sky, letting the sun wake me up naturally."
+    n "For once, the day may actually be bright and clear."
+    n "With a spring in my step, I make my way over to my bathroom to put on my contacts before taking a long look myself in the mirror."
+    n "What Savan said yesterday wasn’t wrong; my hair {i}is{/i} always a mess."
+    n "Since it’s finally clear today, maybe I’ll be able to do something about it."
+    nvl clear
+    
+    # show juni neutral
+    # hide juni neutral
+    # show juni glare
+    # hide juni glare
+    # show juni confused
+    # hide juni confused
+    # three's probably enough
+    # SFX: knocking
+    n "In what seems like only a minute, Dad comes knocking on my door, asking if I know what time it is."
+    n "…{w}…{w}…crap."
+    n "I drop my brush and run back into my room, tripping on my bed and sliding over my covers to my nightstand so I can grab my clock."
+    n "This is bad.{w} I have barely enough time to run to class."
+    nvl clear
+    
+    n "I hurriedly explain the situation to my dad behind the door."
+    n "He offers to drive me to school, but I tell him that it’s okay.{w} I don’t want to bother him with this, especially since it was my mistake to begin with."
+    n "I throw on my clothes, grab my backpack, and basically fall downstairs."
+    n "On my way out, Dad offers me a piece of toast, but I decline, jumping into my boots and sprinting out the door."
+    nvl clear
+    
+    # BKG: a bunch of transitions or something
+    n "In as brisk of a jog I can muster, I stumble down the road to school.{w} If the path wasn’t sloped downhill the entire way, I’d never have been able to make it."
+    nvl clear
+    
+    # BKG: NIH class
+    n "Completely out of breath, I burst into Lit with a minute to spare and my hair as much as a mess as ever."
+    nvl clear
+
+label juni5: # Exchange in the rain
+    n "Despite the morning rush, another day of class passes by without incident."
+    
+    nvl clear
+    
 label juni0:
     # End Juni section
     $ juni_complete = True
