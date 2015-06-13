@@ -378,7 +378,7 @@ label juni3: # Lacklovester Afternoon
     #show jazz annoyed
     "Jazz stands up and leans over her desk to berate Savan."
     Z "Come on, Savan, he and Kevin have been in the club for a month now. Is the president knowing the names of our two new members too much to ask?"
-    "Savan, cool as ever, just tilts his head and shrugs."
+    "Savan, laid-back as ever, just tilts his head and shrugs."
     S "What can I say? I’m bad with names, you know."
     R "It’s okay Jazz, I don’t really mind. We’ve only had, like, three meetings so far, right?"
 label juni31:
@@ -411,20 +411,28 @@ label juni31:
     "Turning back to Ryan, Savan says,"
     S "So now your question would be why, right?"
     "Ryan nods eagerly, oblivious to the trouble brewing in front of him."
-    S "If I had to guess, it’s because of your standards."
+    S "If I had to guess, it’s because of her standards."
     #hide jazz pout
     #show jazz serious
     "Jazz goes silent as I sense imminent danger."
-    S "They’re just too high, ya bitch. You’re just too damn picky."
+    S "Because of her competitive streak, not only does he have to be handsome and well built, he also has to be just as talented {i}but no more than Jazz is{/i} in academics and music."
+    S "Likewise, his college and career prospects have to be just as good as, but no better than hers."
     "Wait, no, stop, you’re hitting too close to home!"
+    S "We’re only in high school, and yet she’s already looking for a committed life partner when most guys just want to touch the goods."
+    "I try to get Savan’s attention, mouthing “nonono” at him over and over."
+    S "Needless to say, there’s no one in this school that fits these far too specific requirements, and so Jazz is still single."
+    "As Jazz sinks deeper, I frantically wave my hands at Savan trying to get him to cut it out while he still can, but he’s going in for the kill."
+    S "Simply put, she’s just far too demanding, y’know?"
+
     # screen shakes
     # hide jazz serious
     # show jazz exclaim
-    Z "You’re wrong!"
+    Z "You’re wrong you're wrong you're wrong!"
     "Instead of going for Savan this time, Jazz turns to me in a flurry."
     "She hugs,{w} clutches me from the side.{w} Very,{w} very{w} tightly."
     "Near tears, she exclaims,"
-    Z "No one can separate our love!"
+    Z "I’m {i}not{/i} single and I’m {i}definitely not{/i} too demanding!"
+    Z "Juni is the only one for me! No one can separate our love!"
     # hide jazz exclaim
     # show jazz hug
     "Inside her iron grip, I smile genuinely and laugh nervously.{w} I’m glad she feels (and grabs) so strongly but I don’t think I can reciprocate."
