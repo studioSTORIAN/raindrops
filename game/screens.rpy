@@ -648,12 +648,15 @@ screen chapters():
 
         has vbox
 
-        textbutton _("Juni 1 - Just Another Day at North Isle High") action Jump(u'juni1')
-        textbutton _("Juni 2 - Another Passing on the Walk Home") action Jump(u'juni2')
-        textbutton _("Juni 3 - Lacklovester Wednesday") action Jump(u'juni3')
-        textbutton _("Juni 4 - One Morning’s Mistakes") action Jump(u'juni4')
-        textbutton _("Juni 5 - Exchange in the rain") action Jump(u'juni5')
-        textbutton _("Juni 6") action NullAction()
+        textbutton _("Juni 1: Just Another Day at North Isle High") action Jump(u'juni1')
+        textbutton _("Juni 2: Another Passing on the Walk Home") action Jump(u'juni2')
+        textbutton _("Juni 3: Lacklovester Wednesday") action Jump(u'juni3')
+        textbutton _("Juni 4: One Morning’s Mistakes") action Jump(u'juni4')
+        textbutton _("Juni 5: Exchange in the rain") action Jump(u'juni5')
+        textbutton _("Juni 6: October Nightingale") action Jump(u'juni6')
+        textbutton _("Juni 7: Blues Barometer") action Jump(u'juni7')
+        textbutton _("Juni 8: October Nightingale II") action Jump(u'juni8')
+        textbutton _("Juni 9: Precipitation") action Jump(u'juni9')
         textbutton _("main menu") action ShowMenu("main_menu")
 
 init -2:

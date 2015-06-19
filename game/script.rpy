@@ -535,6 +535,29 @@ label juni5: # Exchange in the rain
     
     nvl clear
     
+label juni6: # October Nightingale
+    n "Mmmm…"
+    
+    nvl clear
+
+label juni7: # Blues Barometer
+    n "On our way out of school the next day, Jazz stops to talk to me."
+    
+    nvl clear
+    
+label juni8: # October Nightingale II
+    n "\"Add friend\""
+    
+    nvl clear
+    
+label juni9: # Precipitation
+    n "Getting to the town center is even more of a walk than school is, so I ask my mom to drive me there."
+    n "She's busy, and tells me to check with Dad since he’s supposed to be taking her car out for groceries and gas."
+    
+    nvl clear
+
+
+
 label juni0:
     # End Juni section
     $ juni_complete = True
@@ -562,10 +585,6 @@ label transition:
     else:
         e "Strange. Did you not start with Jase or Juni?"
 
-    mark "And they lived happily ever after."
-
-    jazz "We're Canadian."
-
-    "The End."
+    
 
     return
