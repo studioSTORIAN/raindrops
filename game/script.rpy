@@ -539,7 +539,8 @@ label juni5: # Exchange in the rain
     
 label juni6: # October Nightingale
     n "Mmmm…"
-    
+    n "Mmmm…"
+	
     nvl clear
 
 label juni7: # Blues Barometer
