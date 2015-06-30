@@ -1,7 +1,6 @@
-﻿# You can place the script of your game in this file.
+﻿# Splash screen and story script.
 
-# Declare images below this line, using the image statement.
-# eg. image eileen happy = "eileen_happy.png"
+# Declare images below this line using the image statement.
 image black = "#000000"
 # image school = "school.png"
 # image st_john = "st_john.png"
@@ -14,18 +13,21 @@ image st_john_school = "images/school.png"
 # image capial = "capital.png"
 # image island = "island.png"
 
+image juni smile = "images/barkley.png"
+
 image jazz smile = "images/jazz_smile.png"
 image jazz beam = "images/jazz_smile_less.png"
-image juni smile = "images/barkley.png"
-image jazz = "images/jazz_test_l.png"
-image jazz cheeky = "images/jazz_test_l.png"
+image jazz = im.FactorScale("images/jazz_test.png", .29, .29)
+image jazz neutral = im.FactorScale("images/jazz_neutral.png", .29, .29)
+image jazz neutral talk = im.FactorScale("images/jazz_ntrltalk.png", .29, .29)
+image jazz cheeky = im.FactorScale("images/jazz_cheeky.png", .29, .29)
+image jazz serious = im.FactorScale("images/jazz_seriuos.png", .29, .29)
+image jazz serious talk = im.FactorScale("images/jazz_srstalk.png", .29, .29)
+
 image ryan = "images/barkley.png"
 image kevin = "images/jordan.png"
 
 # Declare characters used by this game.
-define e = Character('Eileen', color="#c8ffc8")
-define l = Character(_("TARS"), color="#ffcccc")
-
 define U = Character("Juni", color="#ff0000")
 define Z = Character("Jazz", color="#ffcccc")
 define E = Character("Jase", color="#0000ff")
@@ -88,11 +90,19 @@ label jase1:
     play music "sounds/darkcoffee.mp3"
     scene st_john_school
     with fade
+<<<<<<< HEAD
     jase "My name is Jason Guo."
     mark "But you can just call him Jase. He also likes rain."
     jase "fok u Chad"
     "End Jase section. Congratulations!"
     $ persistent.jase_complete = True
+=======
+    jase "My name is Jase Guo."
+    mark "My name's Chad. No, Mark. No, Swiss Chard. I play lacrosse and fuck people up."
+    jase "yeah what a dick right"
+    "End Jase section."
+    $ jase_complete = True
+>>>>>>> 451ccc492590c060ff8956dcae4210aefe782d54
     jump transition
 
 
@@ -161,7 +171,7 @@ label juni1: # Just another day at North Isle High
     R "Of course! We didn't join Quiz Bowl for nothing, right, Kevin?"
     show kevin at Position(xpos=0.3, xanchor=0.5, ypos=0.5, yanchor=0.5)
     K "What can I say? You and Jazz - sorry, Jasmine - were pretty convincing."
-    # show jazz neutral
+    show jazz neutral
     "As they talk, I remember something."
     # speaker juni smile
     hide ryan
@@ -188,12 +198,12 @@ label juni1: # Just another day at North Isle High
     "As I dig through his cabinets trying to remember where we left the set last summer,
     Jazz starts assigning the teams."
 
-    # jazz :O
+    show jazz serious talk at Position(xpos=0.5, xanchor=0.5, ypos=0.8, yanchor=0.5)
 
     Z "Alright, Ryan, how about you pair up with Kevin, and Juni...{w} you're on your own."
     U "Wait, what? What about you?"
 
-    # jazz neutral
+    show jazz neutral at Position(xpos=0.5, xanchor=0.5, ypos=0.8, yanchor=0.5)
 
     Z "I'm moderating, of course. Someone has to read the questions if Savan isn't here."
 

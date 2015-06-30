@@ -1,13 +1,8 @@
-﻿# This file is in the public domain. Feel free to modify it as a basis
-# for your own screens.
-
-# Note that many of these screens may be given additional arguments in the
+﻿# Note that many of these screens may be given additional arguments in the
 # future. The use of **kwargs in the parameter list ensures your code will
 # work in the future.
 
 ##############################################################################
-# Say
-#
 # Screen that's used to display adv-mode dialogue.
 # http://www.renpy.org/doc/html/screen_special.html#say
 screen say(who, what, side_image=None, two_window=False):
