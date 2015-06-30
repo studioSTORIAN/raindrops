@@ -90,19 +90,19 @@ label jase1:
     play music "sounds/darkcoffee.mp3"
     scene st_john_school
     with fade
-<<<<<<< HEAD
+
     jase "My name is Jason Guo."
     mark "But you can just call him Jase. He also likes rain."
     jase "fok u Chad"
     "End Jase section. Congratulations!"
     $ persistent.jase_complete = True
-=======
+
     jase "My name is Jase Guo."
     mark "My name's Chad. No, Mark. No, Swiss Chard. I play lacrosse and fuck people up."
     jase "yeah what a dick right"
     "End Jase section."
     $ jase_complete = True
->>>>>>> 451ccc492590c060ff8956dcae4210aefe782d54
+
     jump transition
 
 
@@ -548,7 +548,7 @@ label juni5: # Exchange in the rain
 label juni6: # October Nightingale
     n "Mmmm…"
     n "Mmmm…"
-	
+
     nvl clear
 
 label juni7: # Blues Barometer

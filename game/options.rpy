@@ -113,8 +113,8 @@ init -1 python hide:
     ## Padding is space inside the window, where the background is
     ## drawn.
 
-    style.window.left_padding = 12
-    style.window.right_padding = 12
+    style.window.left_padding = 140
+    style.window.right_padding = 140
     style.window.top_padding = 12
     style.window.bottom_padding = 12
 
@@ -149,11 +149,15 @@ init -1 python hide:
 
     ## The file containing the default font.
 
-    style.default.font = "images/AndBasR.ttf"
+    style.default.font = "SourceSansPro.ttf"
 
     ## The default size of text.
 
     style.default.size = 22
+
+    ## Default line spacing.
+
+    # style.default.line_spacing = -10
 
     ## Note that these only change the size of some of the text. Other
     ## buttons have their own styles.
