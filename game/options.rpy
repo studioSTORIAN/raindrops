@@ -149,7 +149,7 @@ init -1 python hide:
 
     ## The file containing the default font.
 
-    style.default.font = "SourceSansPro.ttf"
+    style.default.font = "assets/SourceSansPro-Regular.ttf"
 
     ## The default size of text.
 
