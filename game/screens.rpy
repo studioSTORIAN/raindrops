@@ -170,6 +170,77 @@ screen nvl(dialogue, items=None):
 # http://www.renpy.org/doc/html/screen_special.html#main-menu
 
 screen main_menu():
+    tag menu
+    if persistent.complete == True:
+        use main_menu_complete
+    elif persistent.character == "juni":
+        use main_menu_juni
+    else:
+        use main_menu
+
+screen main_menu():
+
+    # This ensures that any other menu screen is replaced.
+    tag menu
+
+    # The background of the main menu.
+    window:
+        style "mm_root"
+
+
+    # The main menu buttons.
+    frame:
+        style_group "mm"
+        xalign .5
+        yalign .9
+
+        # xminimum int(config.screen_width * .4)
+
+        has vbox
+
+
+        textbutton _("start") action NullAction() # Start()
+        # textbutton _("continue") action Return() # ShowMenu("load")
+        textbutton _("chapters") action ShowMenu("chapters")
+        textbutton _("options") action ShowMenu("preferences")
+        # textbutton _("help") action Help()
+        # textbutton _("extras") action NullAction()
+        textbutton _("quit") action Quit(confirm=False)
+
+    # Left and Right Characters
+    imagemap:
+        ground "images/jordanbw.png"
+        hover "images/jordan.png"
+        xalign 0
+        yalign 1.0
+        hotspot (0,0,250,350) action Start("Jase_start")
+
+    imagemap:
+        ground "images/barkleybw.png"
+        hover "images/barkley.png"
+        xalign 1.2
+        yalign 1.0
+        hotspot (85,0,265,350) action Start("Juni_start")
+
+screen main_menu_juni():
+    tag menu
+    window:
+        style "mm_root"
+    frame:
+        style_group "mm"
+        xalign .5
+        yalign .9
+        has vbox
+
+        textbutton _("start") action NullAction() # Start()
+        textbutton _("continue") action Start() # ShowMenu("load")
+        textbutton _("chapters") action ShowMenu("chapters")
+        textbutton _("options") action ShowMenu("preferences")
+        # textbutton _("help") action Help()
+        # textbutton _("extras") action NullAction()
+        textbutton _("quit") action Quit(confirm=False)
+
+screen main_menu_complete():
 
     # This ensures that any other menu screen is replaced.
     tag menu
@@ -642,6 +713,11 @@ screen chapters():
         yalign .5
 
         has vbox
+
+        textbutton _("Juni 1: Just Another Day at North Isle High") action Start('juni1')
+        textbutton _("Juni 2: Another Passing on the Walk Home") action Start('juni2')
+        textbutton _("Juni 3: Lacklovester Wednesday") action Start('juni3')
+        
 
         textbutton _("Juni 1: Just Another Day at North Isle High") action Jump(u'juni1')
         textbutton _("Juni 2: Another Passing on the Walk Home") action Jump(u'juni2')

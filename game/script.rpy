@@ -69,8 +69,8 @@ label splashscreen:
 
 # The game starts here.
 label start:
-    $ jase_complete = False
-    $ juni_complete = False
+    $ persistent.jase_complete = False
+    $ persistent.juni_complete = False
     $ _game_menu_screen = "pause_menu"
     if start_character == "Jase":
         jump jase1
@@ -90,16 +90,22 @@ label jase1:
     play music "sounds/darkcoffee.mp3"
     scene st_john_school
     with fade
+
     jase "My name is Jase Guo."
-    mark "My name's Chad. No, Mark. No, Swiss Chard. I play lacrosse and fuck people up."
-    jase "yeah what a dick right"
+    mark "My name's Chad.{w} No, Mark.{w} No, Swiss Chard."
+    mark "Anyway, I play lacrosse and fuck people up."
+    jase "We're roommates."
+    mark "Yeah, we sleep in the same bed."
+    jase "No we don't."
+    mark "¬‿¬"
     "End Jase section."
-    $ jase_complete = True
+    $ persistent.jase_complete = True
+
     jump transition
 
 
 label juni1: # Just another day at North Isle High
-
+    $ persistent.character = "juni"
     # Begin Day 1 Juni
     # play sound "rain1.mp3" fadein
     stop music fadeout 1.0
@@ -561,7 +567,7 @@ label juni9: # Precipitation
 
 label juni0:
     # End Juni section
-    $ juni_complete = True
+    $ persistent.juni_complete = True
     jump transition
 
 
@@ -572,14 +578,14 @@ label transition:
     scene black
 
     if start_character == "Jase":
-        if jase_complete:
-            if not juni_complete:
+        if persistent.jase_complete:
+            if not persistent.juni_complete:
                 jump juni1
         else:
             e "oh poopers"
     elif start_character == "Juni":
-        if juni_complete:
-            if not jase_complete:
+        if persistent.juni_complete:
+            if not persistent.jase_complete:
                 jump jase1
         else:
             e "oh poopers x2"

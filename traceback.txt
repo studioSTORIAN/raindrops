@@ -1,24 +1,26 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 540, in script
-    if start_character == "Jase":
-  File "game/script.rpy", line 540, in <module>
-    if start_character == "Jase":
-NameError: name 'start_character' is not defined
+WindowsError: [Error 32] The process cannot access the file because it is being used by another process
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 540, in script
-    if start_character == "Jase":
-  File "C:\Users\Carlin\Desktop\Apps\renpy-6.99.4-sdk\renpy\ast.py", line 1593, in execute
-    if renpy.python.py_eval(condition):
-  File "C:\Users\Carlin\Desktop\Apps\renpy-6.99.4-sdk\renpy\python.py", line 1482, in py_eval
-    return eval(py_compile(source, 'eval'), globals, locals)
-  File "game/script.rpy", line 540, in <module>
-    if start_character == "Jase":
-NameError: name 'start_character' is not defined
+  File "C:\Users\Patrick\renpy-6.99.3-sdk\renpy\bootstrap.py", line 288, in bootstrap
+    renpy.main.main()
+  File "C:\Users\Patrick\renpy-6.99.3-sdk\renpy\main.py", line 431, in main
+    renpy.persistent.update(True)
+  File "C:\Users\Patrick\renpy-6.99.3-sdk\renpy\persistent.py", line 359, in update
+    save()
+  File "C:\Users\Patrick\renpy-6.99.3-sdk\renpy\persistent.py", line 369, in save
+    renpy.loadsave.location.save_persistent(data)
+  File "C:\Users\Patrick\renpy-6.99.3-sdk\renpy\savelocation.py", line 464, in save_persistent
+    l.save_persistent(data)
+  File "C:\Users\Patrick\renpy-6.99.3-sdk\renpy\savelocation.py", line 332, in save_persistent
+    safe_rename(fn_new, fn)
+  File "C:\Users\Patrick\renpy-6.99.3-sdk\renpy\loadsave.py", line 193, in safe_rename
+    os.rename(old, new)
+WindowsError: [Error 32] The process cannot access the file because it is being used by another process
 
 Windows-8-6.2.9200
 Ren'Py 6.99.4.467
