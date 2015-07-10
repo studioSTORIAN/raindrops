@@ -100,28 +100,46 @@ init -1 python hide:
     ## respectively.
 
     # style.window.background = Frame("dialoguebox.png", 12, 12)
-    style.window.background = Solid((12,12,88,210))
+    # style.window.background = Solid((12,12,88,210))
+    style.window.background = "images/dialoguebox.png"
 
     ## Margin is space surrounding the window, where the background
     ## is not drawn.
 
-    # style.window.left_margin = 6
-    # style.window.right_margin = 6
-    # style.window.top_margin = 6
-    # style.window.bottom_margin = 6
+    style.window.left_margin = 140
+    style.window.right_margin = 140
+    # style.window.top_margin = 0
+    style.window.bottom_margin = 50
 
     ## Padding is space inside the window, where the background is
     ## drawn.
 
-    style.window.left_padding = 140
-    style.window.right_padding = 140
-    style.window.top_padding = 12
-    style.window.bottom_padding = 12
+    style.say_window.left_padding = 140
+    style.say_window.right_padding = 140
+    style.say_window.top_padding = 60
+    style.say_window.bottom_padding = 12
 
     ## This is the minimum height of the window, including the margins
     ## and padding.
 
-    # style.window.yminimum = 250
+    style.say_window.yminimum = 250
+
+    ## Say Who Window: a box for the name
+
+    # style.say_who_window.background = Solid((0,75,255,255))
+    style.say_who_window.background = "images/namebox.png"
+    style.say_who_window.xanchor = 0.1
+    style.say_who_window.yanchor = 0.4
+    # style.say_label.font = "assets/SourceSansPro-Light.ttf"
+    # style.say_label.size = 32
+    # style.say_who_window.ymaximum = 200
+
+    # style.say_who_window.text_align = 0.5
+    # style.say_who_window.right_padding = 0
+
+    # style.say_who_window.xmaximum = 150
+    # style.say_who_window.xpos = 0
+    # style.say_who_window.ypos = 0
 
 
     #########################################
@@ -153,7 +171,7 @@ init -1 python hide:
 
     ## The default size of text.
 
-    style.default.size = 22
+    style.default.size = 28
 
     ## Default line spacing.
 
@@ -162,7 +180,7 @@ init -1 python hide:
     ## Note that these only change the size of some of the text. Other
     ## buttons have their own styles.
 
-    # style.default.drop_shadow = [(1, 1)] # Adds a shadow one pixel to the right and one down.
+    # style.default.drop_shadow = [(0, 0)] # Adds a shadow one pixel to the right and one down.
 
 
     #########################################
@@ -211,7 +229,8 @@ init -1 python hide:
     ## - A file name relative to the base directory, which is opened in a
     ##   web browser.
     ## - None, to disable help.
-    config.help = "README.html"
+    # config.help = "README.html"
+    config.help = None
 
 
     #########################################

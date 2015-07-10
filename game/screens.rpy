@@ -26,6 +26,7 @@ screen say(who, what, side_image=None, two_window=False):
 
         # The two window variant.
         vbox:
+            order_reverse True
             style "say_two_window_vbox"
 
             if who:

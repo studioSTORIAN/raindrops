@@ -28,14 +28,18 @@ image ryan = "images/barkley.png"
 image kevin = "images/jordan.png"
 
 # Declare characters used by this game.
-define U = Character("Juni", color="#ff0000")
-define Z = Character("Jazz", color="#ffcccc")
-define E = Character("Jase", color="#0000ff")
-define C = Character("Mark", color="#ccccff")
-define S = Character("Savan")
-define R = Character("Ryan")
-define K = Character("Kevin")
-define A = Character("Audrey")
+# define U = Character("Juni", color="#ff0000", show_two_window=True)
+# define Z = Character("Jazz", color="#ffcccc", show_two_window=True)
+# define E = Character("Jase", color="#0000ff", show_two_window=True)
+# define C = Character("Mark", color="#ccccff", show_two_window=True)
+define U = Character("Juni", show_two_window=True)
+define Z = Character("Jazz", show_two_window=True)
+define E = Character("Jase", show_two_window=True)
+define C = Character("Mark", show_two_window=True)
+define S = Character("Savan", show_two_window=True)
+define R = Character("Ryan", show_two_window=True)
+define K = Character("Kevin", show_two_window=True)
+define A = Character("Audrey", show_two_window=True)
 
 define jase = E
 define juni = U
