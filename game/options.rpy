@@ -100,29 +100,29 @@ init -1 python hide:
     ## respectively.
 
     # style.window.background = Frame("dialoguebox.png", 12, 12)
-    # style.window.background = Solid((12,12,88,210))
-    style.window.background = "images/dialoguebox.png"
+    style.window.background = Solid((12,12,88,210))
+    # style.window.background = "images/dialoguebox.png"
 
     ## Margin is space surrounding the window, where the background
     ## is not drawn.
 
-    style.window.left_margin = 140
-    style.window.right_margin = 140
+    # style.window.left_margin = 140
+    # style.window.right_margin = 140
     # style.window.top_margin = 0
-    style.window.bottom_margin = 50
+    # style.window.bottom_margin = 50
 
     ## Padding is space inside the window, where the background is
     ## drawn.
 
     style.say_window.left_padding = 140
     style.say_window.right_padding = 140
-    style.say_window.top_padding = 60
-    style.say_window.bottom_padding = 12
+    style.say_window.top_padding = 40
+    style.say_window.bottom_padding = 40
 
     ## This is the minimum height of the window, including the margins
     ## and padding.
 
-    style.say_window.yminimum = 250
+    style.say_window.yminimum = 200
 
     ## Say Who Window: a box for the name
 
@@ -130,6 +130,7 @@ init -1 python hide:
     style.say_who_window.background = "images/namebox.png"
     style.say_who_window.xanchor = 0.1
     style.say_who_window.yanchor = 0.4
+    style.say_who_window.left_padding = 50
     # style.say_label.font = "assets/SourceSansPro-Light.ttf"
     # style.say_label.size = 32
     # style.say_who_window.ymaximum = 200
@@ -171,7 +172,7 @@ init -1 python hide:
 
     ## The default size of text.
 
-    style.default.size = 28
+    style.default.size = 26
 
     ## Default line spacing.
 
