@@ -75,7 +75,6 @@ label splashscreen:
 label start:
     $ persistent.jase_complete = False
     $ persistent.juni_complete = False
-    $ _game_menu_screen = "pause_menu"
     if start_character == "Jase":
         jump jase1
     else:
@@ -169,15 +168,15 @@ label juni1: # Just another day at North Isle High
     might need a little more time to settle in."
 
     hide jazz cheeky
-    show ryan at Position(xpos=0.7, xanchor=0.5, ypos=0.5, yanchor=0.5)
+    # show ryan at Position(xpos=0.7, xanchor=0.5, ypos=0.5, yanchor=0.5)
     R "Of course! We didn't join Quiz Bowl for nothing, right, Kevin?"
-    show kevin at Position(xpos=0.3, xanchor=0.5, ypos=0.5, yanchor=0.5)
+    # show kevin at Position(xpos=0.3, xanchor=0.5, ypos=0.5, yanchor=0.5)
     K "What can I say? You and Jazz - sorry, Jasmine - were pretty convincing."
-    show jazz neutral
+    show jazz neutral at center
     "As they talk, I remember something."
     # speaker juni smile
-    hide ryan
-    hide kevin
+    # hide ryan
+    # hide kevin
     U "Oh, right, Jazz. Savan's out sick today."
     U "He told me to let you know to run the meeting as usual, and that you'd know what to do."
     show jazz at Position(xpos=0.5, xanchor=0.5, ypos=0.8, yanchor=0.5)

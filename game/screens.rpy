@@ -199,8 +199,9 @@ screen main_menu():
 
         has vbox
 
-
-        textbutton _("start") action NullAction() # Start()
+        textbutton _("start") action Start("Juni_start")
+        # textbutton _("pause") action ShowMenu("pause_menu")
+        # textbutton _("start") action NullAction() # Start()
         # textbutton _("continue") action Return() # ShowMenu("load")
         textbutton _("chapters") action ShowMenu("chapters")
         textbutton _("options") action ShowMenu("preferences")
@@ -209,19 +210,19 @@ screen main_menu():
         textbutton _("quit") action Quit(confirm=False)
 
     # Left and Right Characters
-    imagemap:
-        ground "images/jordanbw.png"
-        hover "images/jordan.png"
-        xalign 0
-        yalign 1.0
-        hotspot (0,0,250,350) action Start("Jase_start")
+    # imagemap:
+    #     ground "images/jordanbw.png"
+    #     hover "images/jordan.png"
+    #     xalign 0
+    #     yalign 1.0
+    #     hotspot (0,0,250,350) action Start("Jase_start")
 
-    imagemap:
-        ground "images/barkleybw.png"
-        hover "images/barkley.png"
-        xalign 1.2
-        yalign 1.0
-        hotspot (85,0,265,350) action Start("Juni_start")
+    # imagemap:
+    #     ground "images/barkleybw.png"
+    #     hover "images/barkley.png"
+    #     xalign 1.2
+    #     yalign 1.0
+    #     hotspot (85,0,265,350) action Start("Juni_start")
 
 screen main_menu_juni():
     tag menu
@@ -678,7 +679,7 @@ screen pause_menu():
     frame:
         style_group "pm"
         xalign .5
-        yalign .5
+        yalign .6
 
         has vbox
         
@@ -718,19 +719,31 @@ screen chapters():
         textbutton _("Juni 1: Just Another Day at North Isle High") action Start('juni1')
         textbutton _("Juni 2: Another Passing on the Walk Home") action Start('juni2')
         textbutton _("Juni 3: Lacklovester Wednesday") action Start('juni3')
-        
 
-        textbutton _("Juni 1: Just Another Day at North Isle High") action Jump(u'juni1')
-        textbutton _("Juni 2: Another Passing on the Walk Home") action Jump(u'juni2')
-        textbutton _("Juni 3: Lacklovester Wednesday") action Jump(u'juni3')
-        textbutton _("Juni 4: One Morning’s Mistakes") action Jump(u'juni4')
-        textbutton _("Juni 5: Exchange in the rain") action Jump(u'juni5')
-        textbutton _("Juni 6: October Nightingale") action Jump(u'juni6')
-        textbutton _("Juni 7: Blues Barometer") action Jump(u'juni7')
-        textbutton _("Juni 8: October Nightingale II") action Jump(u'juni8')
-        textbutton _("Juni 9: Precipitation") action Jump(u'juni9')
+        # textbutton _("Juni 1: Just Another Day at North Isle High") action Jump(u'juni1')
+        # textbutton _("Juni 2: Another Passing on the Walk Home") action Jump(u'juni2')
+        # textbutton _("Juni 3: Lacklovester Wednesday") action Jump(u'juni3')
+        # textbutton _("Juni 4: One Morning’s Mistakes") action Jump(u'juni4')
+        # textbutton _("Juni 5: Exchange in the rain") action Jump(u'juni5')
+        # textbutton _("Juni 6: October Nightingale") action Jump(u'juni6')
+        # textbutton _("Juni 7: Blues Barometer") action Jump(u'juni7')
+        # textbutton _("Juni 8: October Nightingale II") action Jump(u'juni8')
+        # textbutton _("Juni 9: Precipitation") action Jump(u'juni9')
         textbutton _("main menu") action ShowMenu("main_menu")
 
 init -2:
     style cm_button:
         size_group "cm"
+
+
+#################
+# Rollback screen
+#
+# Replaces the rollback functionality built into RenPy.
+screen rollback():
+
+    tag menu
+    window:
+        style "rb_root"
+    frame:
+        style_group "rb"
