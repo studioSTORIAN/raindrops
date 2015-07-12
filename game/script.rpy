@@ -13,7 +13,7 @@ image st_john_school = "images/school.png"
 # image capial = "capital.png"
 # image island = "island.png"
 
-image juni smile = "images/barkley.png"
+# image juni smile = "images/barkley.png"
 
 image jazz smile = "images/jazz_smile.png"
 image jazz beam = "images/jazz_smile_less.png"
@@ -49,6 +49,8 @@ define jazz = Z
 define n = Character(None, kind=nvl)
 
 define typo = Character("TYPO HERE?", color="#ff0000")
+
+define front = Position(xpos=0.5, xanchor=0.5, ypos=0.8, yanchor=0.5)
 
 
 # Add a splashscreen: http://www.renpy.org/wiki/renpy/doc/cookbook/Adding_a_Splashscreen
@@ -109,13 +111,14 @@ label jase1:
 
 label juni1: # Just another day at North Isle High
     $ persistent.character = "juni"
+    $ renpy.save("savedrops")
     # Begin Day 1 Juni
     # play sound "rain1.mp3" fadein
     stop music fadeout 1.0
     scene black
 
     "It's raining.{w} As usual."
-    play music "sounds/dankcoffee.mp3"
+    # play music "sounds/dankcoffee.mp3"
     "{cps=35}I lean back in my chair, put my arms up, and stretch after another long day of classes.{/cps}"
 
     scene north_isle_classroom
@@ -138,7 +141,7 @@ label juni1: # Just another day at North Isle High
     # stop sound "crowd.mp3" fadeout
     # play sound "footsteps.mp3" fadein
     # show jazz smile
-    show jazz at Position(xpos=0.5, xanchor=0.5, ypos=0.8, yanchor=0.5)
+    show jazz at front
         # linear 1.0 xalign 0.2
     # with dissolve
 
@@ -159,7 +162,7 @@ label juni1: # Just another day at North Isle High
     King Henry's infidelities, Ryan and Kevin come in."
 
     hide jazz
-    show jazz cheeky at Position(xpos=0.5, xanchor=0.5, ypos=0.8, yanchor=0.5)
+    show jazz cheeky at front
     Z "Hey you two! Good job remembering to come to practice today. I thought I was going
     to have to track you down again like last week."
 
@@ -172,14 +175,14 @@ label juni1: # Just another day at North Isle High
     R "Of course! We didn't join Quiz Bowl for nothing, right, Kevin?"
     # show kevin at Position(xpos=0.3, xanchor=0.5, ypos=0.5, yanchor=0.5)
     K "What can I say? You and Jazz - sorry, Jasmine - were pretty convincing."
-    show jazz neutral at center
+    show jazz neutral at front
     "As they talk, I remember something."
     # speaker juni smile
     # hide ryan
     # hide kevin
     U "Oh, right, Jazz. Savan's out sick today."
     U "He told me to let you know to run the meeting as usual, and that you'd know what to do."
-    show jazz at Position(xpos=0.5, xanchor=0.5, ypos=0.8, yanchor=0.5)
+    show jazz at front
     Z "Yeah! He messaged me."
     Z "Okay, you two, I hope you've been reading up on Quiz Bowl questions,
     \'cause today we're going to be doing your first-ever live practice!"
@@ -199,12 +202,12 @@ label juni1: # Just another day at North Isle High
     "As I dig through his cabinets trying to remember where we left the set last summer,
     Jazz starts assigning the teams."
 
-    show jazz serious talk at Position(xpos=0.5, xanchor=0.5, ypos=0.8, yanchor=0.5)
+    show jazz serious talk at front
 
     Z "Alright, Ryan, how about you pair up with Kevin, and Juni...{w} you're on your own."
     U "Wait, what? What about you?"
 
-    show jazz neutral at Position(xpos=0.5, xanchor=0.5, ypos=0.8, yanchor=0.5)
+    show jazz neutral at front
 
     Z "I'm moderating, of course. Someone has to read the questions if Savan isn't here."
 
@@ -234,6 +237,7 @@ label juni1: # Just another day at North Isle High
     # stop sounds
 
 label juni2: # Another Passing on the Walk Home
+    $ renpy.save("savedrops")
 
     scene st_john_north
     with fade
@@ -367,6 +371,7 @@ label juni2: # Another Passing on the Walk Home
     with dissolve
 
 label juni3: # Lacklovester Afternoon
+    $ renpy.save("savedrops")
     # scene class
     # play sound heavy rain
     n "After another day of class, Jazz and I find ourselves in Mr. Schumacher’s room again, even though we don’t have practice."
@@ -505,6 +510,7 @@ label juni31:
     nvl clear
 
 label juni4: # One Morning’s Mistakes
+    $ renpy.save("savedrops")
     scene black
     n "Bright and early, I wake up before my alarm.{w} After sitting up and stretching, I turn to disable it before it has a chance to go off."
     n "Outside my window, the sky is clear save for a few decorative clouds.{w} Yesterday’s downpour must have rained out the sky, letting the sun wake me up naturally."

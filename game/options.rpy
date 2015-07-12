@@ -259,7 +259,7 @@ init -1 python hide:
     config.end_game_transition = None
 
     ## Used when a game is loaded.
-    config.after_load_transition = None
+    config.after_load_transition = fade
 
     ## Used when the window is shown.
     config.window_show_transition = None
@@ -331,9 +331,13 @@ init -1 python hide:
     style.pm_frame.background = None
     # style.pm_button.background = Solid((0,0,0,255))
 
-init python:
     config.quit_action = Quit(confirm=False)
+    config.has_autosave = False
     _game_menu_screen = "pause_menu"
+
+    config.missing_image_callback = "images/blank.png"
+    config.window_icon = "images/logo.png"
+    # config.windows_icon = "images/logo_small.png"
 
 
 

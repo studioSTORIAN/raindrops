@@ -170,16 +170,31 @@ screen nvl(dialogue, items=None):
 # Screen that's used to display the main menu, when Ren'Py first starts
 # http://www.renpy.org/doc/html/screen_special.html#main-menu
 
+init -1 python:
+    def safeload(filename="savedrops",*args,**kwargs):
+        if renpy.can_load(filename,args):
+            return renpy.load(filename)
+        else:
+            persistent.character = None
+            return
+    def deletesave(filename):
+        persistent.character = None
+        renpy.unlink_save(filename)
+        renpy.full_restart(transition=fade)
+        return
+
 screen main_menu():
     tag menu
     if persistent.complete == True:
         use main_menu_complete
-    elif persistent.character == "juni":
+    elif persistent.juni_complete == True:
+        use main_menu_base
+    elif persistent.character == "juni" and renpy.can_load("savedrops"):
         use main_menu_juni
     else:
-        use main_menu
+        use main_menu_base
 
-screen main_menu():
+screen main_menu_base():
 
     # This ensures that any other menu screen is replaced.
     tag menu
@@ -202,7 +217,8 @@ screen main_menu():
         textbutton _("start") action Start("Juni_start")
         # textbutton _("pause") action ShowMenu("pause_menu")
         # textbutton _("start") action NullAction() # Start()
-        # textbutton _("continue") action Return() # ShowMenu("load")
+        # textbutton _("continue") action Function(safeload) # ShowMenu("load")
+        # textbutton _("reset") action Function(deletesave,"savedrops")
         textbutton _("chapters") action ShowMenu("chapters")
         textbutton _("options") action ShowMenu("preferences")
         # textbutton _("help") action Help()
@@ -234,12 +250,11 @@ screen main_menu_juni():
         yalign .9
         has vbox
 
-        textbutton _("start") action NullAction() # Start()
-        textbutton _("continue") action Start() # ShowMenu("load")
+        # textbutton _("start") action NullAction() # Start()
+        textbutton _("continue") action Function(safeload) # ShowMenu("load")
         textbutton _("chapters") action ShowMenu("chapters")
         textbutton _("options") action ShowMenu("preferences")
-        # textbutton _("help") action Help()
-        # textbutton _("extras") action NullAction()
+        textbutton _("reset") action Function(deletesave,"savedrops")
         textbutton _("quit") action Quit(confirm=False)
 
 screen main_menu_complete():
@@ -546,6 +561,13 @@ screen preferences():
                             action Play("voice", config.sample_voice)
                             style "soundtest_button"
 
+            frame:
+                style_group "pref"
+                has vbox
+
+                label _("Reset Save")
+                textbutton _("Reset") action Function(deletesave,"savedrops")
+
 init -2:
     style pref_frame:
         xfill True
@@ -720,16 +742,11 @@ screen chapters():
         textbutton _("Juni 2: Another Passing on the Walk Home") action Start('juni2')
         textbutton _("Juni 3: Lacklovester Wednesday") action Start('juni3')
         textbutton _("Juni 4: One Morning's Mistakes") action Start('juni4')
-
-        # textbutton _("Juni 1: Just Another Day at North Isle High") action Jump(u'juni1')
-        # textbutton _("Juni 2: Another Passing on the Walk Home") action Jump(u'juni2')
-        # textbutton _("Juni 3: Lacklovester Wednesday") action Jump(u'juni3')
-        # textbutton _("Juni 4: One Morning’s Mistakes") action Jump(u'juni4')
-        # textbutton _("Juni 5: Exchange in the rain") action Jump(u'juni5')
-        # textbutton _("Juni 6: October Nightingale") action Jump(u'juni6')
-        # textbutton _("Juni 7: Blues Barometer") action Jump(u'juni7')
-        # textbutton _("Juni 8: October Nightingale II") action Jump(u'juni8')
-        # textbutton _("Juni 9: Precipitation") action Jump(u'juni9')
+        # textbutton _("Juni 5: Exchange in the Rain") action Start('juni5')
+        # textbutton _("Juni 6: October Nightingale") action Start('juni6')
+        # textbutton _("Juni 7: Blues Barometer") action Start('juni7')
+        # textbutton _("Juni 7: October Nightingale II") action Start('juni8')
+        # textbutton _("Juni 9: Precipitation") action Start('juni9')
         textbutton _("main menu") action ShowMenu("main_menu")
 
 init -2:
