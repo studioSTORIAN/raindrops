@@ -505,6 +505,7 @@ label juni31:
     nvl clear
 
 label juni4: # One Morning’s Mistakes
+    scene black
     n "Bright and early, I wake up before my alarm.{w} After sitting up and stretching, I turn to disable it before it has a chance to go off."
     n "Outside my window, the sky is clear save for a few decorative clouds.{w} Yesterday’s downpour must have rained out the sky, letting the sun wake me up naturally."
     n "For once, the day may actually be bright and clear."
@@ -522,7 +523,7 @@ label juni4: # One Morning’s Mistakes
     # three's probably enough
     # SFX: knocking
     n "In what seems like only a minute, Dad comes knocking on my door, asking if I know what time it is."
-    n "…{w}…{w}…crap."
+    n "...{w}...{w}...crap."
     n "I drop my brush and run back into my room, tripping on my bed and sliding over my covers to my nightstand so I can grab my clock."
     n "This is bad.{w} I have barely enough time to run to class."
     nvl clear
@@ -541,7 +542,10 @@ label juni4: # One Morning’s Mistakes
     n "Completely out of breath, I burst into Lit with a minute to spare and my hair as much as a mess as ever."
     nvl clear
 
+    jump juni0
+
 label juni5: # Exchange in the rain
+    scene black
     n "Despite the morning rush, another day of class passes by without incident."
     
     nvl clear
@@ -570,8 +574,11 @@ label juni9: # Precipitation
 
 label juni0:
     # End Juni section
+    "Thanks for reading through our demo.{w} Stay tuned for updates!"
+
     $ persistent.juni_complete = True
-    jump transition
+    # jump transition
+    return
 
 
 
