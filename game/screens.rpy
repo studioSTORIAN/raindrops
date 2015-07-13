@@ -177,6 +177,7 @@ init -1 python:
         else:
             persistent.character = None
             return
+    
     def deletesave(filename):
         persistent.character = None
         renpy.unlink_save(filename)
@@ -251,10 +252,12 @@ screen main_menu_juni():
         has vbox
 
         # textbutton _("start") action NullAction() # Start()
+        textbutton _("start") action Start("Juni_start")
         textbutton _("continue") action Function(safeload) # ShowMenu("load")
+        # textbutton _("pause") action ShowMenu("pause_menu")
         textbutton _("chapters") action ShowMenu("chapters")
         textbutton _("options") action ShowMenu("preferences")
-        textbutton _("reset") action Function(deletesave,"savedrops")
+        # textbutton _("reset") action Function(deletesave,"savedrops")
         textbutton _("quit") action Quit(confirm=False)
 
 screen main_menu_complete():
@@ -565,7 +568,7 @@ screen preferences():
                 style_group "pref"
                 has vbox
 
-                label _("Reset Save")
+                label _("Reset Progress")
                 textbutton _("Reset") action Function(deletesave,"savedrops")
 
 init -2:

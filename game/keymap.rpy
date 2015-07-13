@@ -8,4 +8,5 @@ init: # -1 python hide:
     $ config.keymap['rollforward'].append('K_DOWN')
     $ config.keymap['rollforward'].append('repeat_K_DOWN')
     $ config.keymap['focus_down'].remove('K_DOWN')
-    $ config.keymap['game_menu'].remove('mouseup_3')
+    # $ config.keymap['game_menu'].remove('mouseup_3')
+    $ _game_menu_screen = "pause_menu"

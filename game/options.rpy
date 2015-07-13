@@ -333,7 +333,6 @@ init -1 python hide:
 
     config.quit_action = Quit(confirm=False)
     config.has_autosave = False
-    _game_menu_screen = "pause_menu"
 
     config.missing_image_callback = "images/blank.png"
     config.window_icon = "images/logo.png"
