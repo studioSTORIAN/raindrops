@@ -184,6 +184,13 @@ init -1 python:
         renpy.full_restart(transition=fade)
         return
 
+    def safestart():
+        if renpy.can_load("savedrops"): # if there's a save file
+            return renpy.call_screen("yesno_prompt",
+                "Are you sure you would like to start over? Starting a new game will overwrite your current save file.",
+                Start("Juni_start"), Return())
+        else:
+            renpy.Start("Juni_start")
 screen main_menu():
     tag menu
     if persistent.complete == True:
@@ -252,7 +259,7 @@ screen main_menu_juni():
         has vbox
 
         # textbutton _("start") action NullAction() # Start()
-        textbutton _("start") action Start("Juni_start")
+        textbutton _("start") action ShowMenu("restart_prompt")
         textbutton _("continue") action Function(safeload) # ShowMenu("load")
         # textbutton _("pause") action ShowMenu("pause_menu")
         textbutton _("chapters") action ShowMenu("chapters")
@@ -768,3 +775,14 @@ screen rollback():
         style "rb_root"
     frame:
         style_group "rb"
+
+
+##########
+# Restart confirmation
+#
+# Because it's cleaner this way than trying to fit it all in main_menu_juni as one line.
+screen restart_prompt():
+
+    tag menu
+    use yesno_prompt("Are you sure you would like to start over? Starting a new game will overwrite your current save file.",
+     Start("Juni_start"), ShowMenu("main_menu_juni"))
