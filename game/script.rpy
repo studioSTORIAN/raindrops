@@ -119,7 +119,7 @@ label juni1: # Just another day at North Isle High
 
     "It's raining.{w} As usual."
     # play music "sounds/dankcoffee.mp3"
-    "{cps=35}I lean back in my chair, put my arms up, and stretch after another long day of classes.{/cps}"
+    "I lean back in my chair, put my arms up, and stretch after another long day of classes."
 
     scene north_isle_classroom
     with dissolve
@@ -154,7 +154,7 @@ label juni1: # Just another day at North Isle High
     because she didn't give us the periodic table."
 
     # another juni smile????
-    U "Ha, that's too bad. I'm sure they'll give it to you on the test-"
+    U "Ha, that's too bad. I'm sure they'll give it to you on the test-{w=0.4}{nw}"
 
     # play sound "footsteps.mp3" fadein
 

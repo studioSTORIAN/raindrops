@@ -309,7 +309,7 @@ init -1 python hide:
 
     ## The default text speed in characters per second. 0 is infinite.
 
-    config.default_text_cps = 35 # set as normal, make another slow, another fast
+    config.default_text_cps = 60 # set as normal, make another slow, another fast
 
     ## The default auto-forward time setting.
 
